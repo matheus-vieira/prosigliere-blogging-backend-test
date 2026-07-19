@@ -1,0 +1,3054 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coverage line-rate="0.9740000000000001" branch-rate="0.9456" version="1.9" timestamp="1784499858" lines-covered="863" lines-valid="886" branches-covered="87" branches-valid="92">
+  <sources>
+    <source>/mnt/c/src/github/End2EndSystems/prosigliere/blogging-backend-test/src/</source>
+  </sources>
+  <packages>
+    <package name="Blogging.Api" line-rate="0.9819" branch-rate="0.9333" complexity="74">
+      <classes>
+        <class name="Program/&lt;&lt;Main&gt;$&gt;d__0" filename="Blogging.Api/Program.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="4" hits="25" branch="False" />
+                <line number="5" hits="25" branch="False" />
+                <line number="6" hits="25" branch="False" />
+                <line number="8" hits="25" branch="False" />
+                <line number="9" hits="25" branch="False" />
+                <line number="11" hits="25" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="4" hits="25" branch="False" />
+            <line number="5" hits="25" branch="False" />
+            <line number="6" hits="25" branch="False" />
+            <line number="8" hits="25" branch="False" />
+            <line number="9" hits="25" branch="False" />
+            <line number="11" hits="25" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.CommentResponse" filename="Blogging.Api/Posts/Contracts/CommentResponse.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PostId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.Int32,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="2" branch="False" />
+            <line number="8" hits="3" branch="False" />
+            <line number="9" hits="6" branch="False" />
+            <line number="6" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.CreateCommentRequest" filename="Blogging.Api/Posts/Contracts/CreateCommentRequest.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.CreatePostRequest" filename="Blogging.Api/Posts/Contracts/CreatePostRequest.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="22" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="22" branch="False" />
+            <line number="16" hits="22" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.PagedPostSearchResponse" filename="Blogging.Api/Posts/Contracts/PagedPostSearchResponse.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Page" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.IReadOnlyList`1&lt;Blogging.Api.Posts.Contracts.PostListItemResponse&gt;,System.Int32,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="6" branch="False" />
+            <line number="8" hits="3" branch="False" />
+            <line number="9" hits="3" branch="False" />
+            <line number="10" hits="10" branch="False" />
+            <line number="6" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.PostDetailResponse" filename="Blogging.Api/Posts/Contracts/PostDetailResponse.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.String,System.String,System.Collections.Generic.IReadOnlyList`1&lt;Blogging.Api.Posts.Contracts.CommentResponse&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="2" branch="False" />
+            <line number="10" hits="4" branch="False" />
+            <line number="6" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.PostListItemResponse" filename="Blogging.Api/Posts/Contracts/PostListItemResponse.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="19" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="17" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="41" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.String,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="26" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="19" branch="False" />
+            <line number="8" hits="17" branch="False" />
+            <line number="9" hits="41" branch="False" />
+            <line number="6" hits="26" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Posts.Contracts.PostSearchRequest" filename="Blogging.Api/Posts/Contracts/PostSearchRequest.cs" line-rate="1" branch-rate="1" complexity="8">
+          <methods>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_HasComments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_MinCommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_MaxCommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Page" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="get_SortBy" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="10" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="10" branch="False" />
+            <line number="10" hits="10" branch="False" />
+            <line number="12" hits="10" branch="False" />
+            <line number="14" hits="10" branch="False" />
+            <line number="16" hits="10" branch="False" />
+            <line number="18" hits="10" branch="False" />
+            <line number="20" hits="10" branch="False" />
+            <line number="22" hits="10" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.ErrorHandling.GlobalExceptionHandler" filename="Blogging.Api/ErrorHandling/GlobalExceptionHandler.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;Blogging.Api.ErrorHandling.GlobalExceptionHandler&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="26" branch="False" />
+                <line number="10" hits="26" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="26" branch="False" />
+            <line number="10" hits="26" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.ErrorHandling.GlobalExceptionHandler/&lt;TryHandleAsync&gt;d__2" filename="Blogging.Api/ErrorHandling/GlobalExceptionHandler.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="23" hits="2" branch="False" />
+                <line number="24" hits="2" branch="False" />
+                <line number="25" hits="2" branch="False" />
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="29" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="83" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="30" hits="2" branch="False" />
+                <line number="31" hits="2" branch="False" />
+                <line number="32" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="126" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="2" branch="False" />
+                <line number="34" hits="2" branch="False" />
+                <line number="35" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="153" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="39" hits="2" branch="False" />
+                <line number="40" hits="2" branch="False" />
+                <line number="41" hits="2" branch="False" />
+                <line number="43" hits="2" branch="False" />
+                <line number="44" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="2" branch="False" />
+            <line number="24" hits="2" branch="False" />
+            <line number="25" hits="2" branch="False" />
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="29" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="83" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="30" hits="2" branch="False" />
+            <line number="31" hits="2" branch="False" />
+            <line number="32" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="126" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="33" hits="2" branch="False" />
+            <line number="34" hits="2" branch="False" />
+            <line number="35" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="153" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="39" hits="2" branch="False" />
+            <line number="40" hits="2" branch="False" />
+            <line number="41" hits="2" branch="False" />
+            <line number="43" hits="2" branch="False" />
+            <line number="44" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.MapBloggingEndpointsExtension" filename="Blogging.Api/Endpoints/MapBloggingEndpointsExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapBloggingEndpoints" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="27" branch="False" />
+                <line number="18" hits="27" branch="False" />
+                <line number="20" hits="28" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="27" branch="False" />
+            <line number="18" hits="27" branch="False" />
+            <line number="20" hits="28" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapCreateCommentEndpointExtension" filename="Blogging.Api/Endpoints/Posts/MapCreateCommentEndpointExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapCreateCommentEndpoint" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="27" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="25" hits="27" branch="False" />
+                <line number="26" hits="27" branch="False" />
+                <line number="27" hits="27" branch="False" />
+                <line number="28" hits="27" branch="False" />
+                <line number="29" hits="27" branch="False" />
+                <line number="30" hits="6" branch="False" />
+                <line number="31" hits="27" branch="False" />
+                <line number="32" hits="6" branch="False" />
+                <line number="33" hits="6" branch="False" />
+                <line number="34" hits="6" branch="False" />
+                <line number="35" hits="1" branch="False" />
+                <line number="36" hits="1" branch="False" />
+                <line number="37" hits="27" branch="False" />
+                <line number="38" hits="27" branch="False" />
+                <line number="39" hits="5" branch="False" />
+                <line number="40" hits="1" branch="False" />
+                <line number="41" hits="1" branch="False" />
+                <line number="42" hits="27" branch="False" />
+                <line number="43" hits="27" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="47" hits="4" branch="False" />
+                <line number="48" hits="4" branch="False" />
+                <line number="49" hits="4" branch="False" />
+                <line number="50" hits="4" branch="False" />
+                <line number="51" hits="4" branch="False" />
+                <line number="52" hits="27" branch="False" />
+                <line number="53" hits="3" branch="False" />
+                <line number="54" hits="1" branch="False" />
+                <line number="55" hits="1" branch="False" />
+                <line number="56" hits="27" branch="False" />
+                <line number="57" hits="27" branch="False" />
+                <line number="58" hits="2" branch="False" />
+                <line number="59" hits="2" branch="False" />
+                <line number="60" hits="2" branch="False" />
+                <line number="61" hits="2" branch="False" />
+                <line number="62" hits="27" branch="False" />
+                <line number="63" hits="2" branch="False" />
+                <line number="64" hits="27" branch="False" />
+                <line number="65" hits="1" branch="False" />
+                <line number="66" hits="1" branch="False" />
+                <line number="67" hits="1" branch="False" />
+                <line number="68" hits="27" branch="False" />
+                <line number="69" hits="6" branch="False" />
+                <line number="70" hits="27" branch="False" />
+                <line number="71" hits="27" branch="False" />
+                <line number="72" hits="27" branch="False" />
+                <line number="73" hits="27" branch="False" />
+                <line number="75" hits="27" branch="False" />
+                <line number="76" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="27" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="25" hits="27" branch="False" />
+            <line number="26" hits="27" branch="False" />
+            <line number="27" hits="27" branch="False" />
+            <line number="28" hits="27" branch="False" />
+            <line number="29" hits="27" branch="False" />
+            <line number="30" hits="6" branch="False" />
+            <line number="31" hits="27" branch="False" />
+            <line number="32" hits="6" branch="False" />
+            <line number="33" hits="6" branch="False" />
+            <line number="34" hits="6" branch="False" />
+            <line number="35" hits="1" branch="False" />
+            <line number="36" hits="1" branch="False" />
+            <line number="37" hits="27" branch="False" />
+            <line number="38" hits="27" branch="False" />
+            <line number="39" hits="5" branch="False" />
+            <line number="40" hits="1" branch="False" />
+            <line number="41" hits="1" branch="False" />
+            <line number="42" hits="27" branch="False" />
+            <line number="43" hits="27" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="47" hits="4" branch="False" />
+            <line number="48" hits="4" branch="False" />
+            <line number="49" hits="4" branch="False" />
+            <line number="50" hits="4" branch="False" />
+            <line number="51" hits="4" branch="False" />
+            <line number="52" hits="27" branch="False" />
+            <line number="53" hits="3" branch="False" />
+            <line number="54" hits="1" branch="False" />
+            <line number="55" hits="1" branch="False" />
+            <line number="56" hits="27" branch="False" />
+            <line number="57" hits="27" branch="False" />
+            <line number="58" hits="2" branch="False" />
+            <line number="59" hits="2" branch="False" />
+            <line number="60" hits="2" branch="False" />
+            <line number="61" hits="2" branch="False" />
+            <line number="62" hits="27" branch="False" />
+            <line number="63" hits="2" branch="False" />
+            <line number="64" hits="27" branch="False" />
+            <line number="65" hits="1" branch="False" />
+            <line number="66" hits="1" branch="False" />
+            <line number="67" hits="1" branch="False" />
+            <line number="68" hits="27" branch="False" />
+            <line number="69" hits="6" branch="False" />
+            <line number="70" hits="27" branch="False" />
+            <line number="71" hits="27" branch="False" />
+            <line number="72" hits="27" branch="False" />
+            <line number="73" hits="27" branch="False" />
+            <line number="75" hits="27" branch="False" />
+            <line number="76" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapCreateCommentEndpointExtension/&lt;&gt;c/&lt;&lt;MapCreateCommentEndpoint&gt;b__0_0&gt;d" filename="Blogging.Api/Endpoints/Posts/MapCreateCommentEndpointExtension.cs" line-rate="1" branch-rate="0.9" complexity="10">
+          <methods />
+          <lines />
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapCreatePostEndpointExtension" filename="Blogging.Api/Endpoints/Posts/MapCreatePostEndpointExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapCreatePostEndpoint" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="27" branch="False" />
+                <line number="20" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="25" hits="27" branch="False" />
+                <line number="26" hits="27" branch="False" />
+                <line number="27" hits="27" branch="False" />
+                <line number="28" hits="12" branch="False" />
+                <line number="29" hits="27" branch="False" />
+                <line number="30" hits="12" branch="False" />
+                <line number="31" hits="12" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="33" hits="1" branch="False" />
+                <line number="34" hits="27" branch="False" />
+                <line number="35" hits="27" branch="False" />
+                <line number="36" hits="11" branch="False" />
+                <line number="37" hits="11" branch="False" />
+                <line number="38" hits="11" branch="False" />
+                <line number="39" hits="11" branch="False" />
+                <line number="40" hits="11" branch="False" />
+                <line number="41" hits="11" branch="False" />
+                <line number="42" hits="11" branch="False" />
+                <line number="43" hits="11" branch="False" />
+                <line number="44" hits="27" branch="False" />
+                <line number="45" hits="9" branch="False" />
+                <line number="46" hits="9" branch="False" />
+                <line number="47" hits="9" branch="False" />
+                <line number="48" hits="9" branch="False" />
+                <line number="49" hits="27" branch="False" />
+                <line number="50" hits="9" branch="False" />
+                <line number="51" hits="27" branch="False" />
+                <line number="52" hits="2" branch="False" />
+                <line number="53" hits="2" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="27" branch="False" />
+                <line number="56" hits="12" branch="False" />
+                <line number="57" hits="27" branch="False" />
+                <line number="58" hits="27" branch="False" />
+                <line number="59" hits="27" branch="False" />
+                <line number="61" hits="27" branch="False" />
+                <line number="62" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="27" branch="False" />
+            <line number="20" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="25" hits="27" branch="False" />
+            <line number="26" hits="27" branch="False" />
+            <line number="27" hits="27" branch="False" />
+            <line number="28" hits="12" branch="False" />
+            <line number="29" hits="27" branch="False" />
+            <line number="30" hits="12" branch="False" />
+            <line number="31" hits="12" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="33" hits="1" branch="False" />
+            <line number="34" hits="27" branch="False" />
+            <line number="35" hits="27" branch="False" />
+            <line number="36" hits="11" branch="False" />
+            <line number="37" hits="11" branch="False" />
+            <line number="38" hits="11" branch="False" />
+            <line number="39" hits="11" branch="False" />
+            <line number="40" hits="11" branch="False" />
+            <line number="41" hits="11" branch="False" />
+            <line number="42" hits="11" branch="False" />
+            <line number="43" hits="11" branch="False" />
+            <line number="44" hits="27" branch="False" />
+            <line number="45" hits="9" branch="False" />
+            <line number="46" hits="9" branch="False" />
+            <line number="47" hits="9" branch="False" />
+            <line number="48" hits="9" branch="False" />
+            <line number="49" hits="27" branch="False" />
+            <line number="50" hits="9" branch="False" />
+            <line number="51" hits="27" branch="False" />
+            <line number="52" hits="2" branch="False" />
+            <line number="53" hits="2" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="27" branch="False" />
+            <line number="56" hits="12" branch="False" />
+            <line number="57" hits="27" branch="False" />
+            <line number="58" hits="27" branch="False" />
+            <line number="59" hits="27" branch="False" />
+            <line number="61" hits="27" branch="False" />
+            <line number="62" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapCreatePostEndpointExtension/&lt;&gt;c/&lt;&lt;MapCreatePostEndpoint&gt;b__0_0&gt;d" filename="Blogging.Api/Endpoints/Posts/MapCreatePostEndpointExtension.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods />
+          <lines />
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapGetPostEndpointExtension" filename="Blogging.Api/Endpoints/Posts/MapGetPostEndpointExtension.cs" line-rate="0.8974" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapGetPostEndpoint" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="0.8974" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="27" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="25" hits="27" branch="False" />
+                <line number="26" hits="3" branch="False" />
+                <line number="27" hits="3" branch="False" />
+                <line number="28" hits="3" branch="False" />
+                <line number="29" hits="1" branch="False" />
+                <line number="30" hits="1" branch="False" />
+                <line number="31" hits="27" branch="False" />
+                <line number="32" hits="27" branch="False" />
+                <line number="33" hits="2" branch="False" />
+                <line number="34" hits="2" branch="False" />
+                <line number="35" hits="2" branch="False" />
+                <line number="36" hits="27" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="1" branch="False" />
+                <line number="39" hits="1" branch="False" />
+                <line number="40" hits="27" branch="False" />
+                <line number="41" hits="27" branch="False" />
+                <line number="42" hits="1" branch="False" />
+                <line number="43" hits="1" branch="False" />
+                <line number="44" hits="1" branch="False" />
+                <line number="45" hits="1" branch="False" />
+                <line number="46" hits="1" branch="False" />
+                <line number="47" hits="0" branch="False" />
+                <line number="48" hits="0" branch="False" />
+                <line number="49" hits="0" branch="False" />
+                <line number="50" hits="0" branch="False" />
+                <line number="51" hits="1" branch="False" />
+                <line number="52" hits="27" branch="False" />
+                <line number="53" hits="1" branch="False" />
+                <line number="54" hits="3" branch="False" />
+                <line number="55" hits="27" branch="False" />
+                <line number="56" hits="27" branch="False" />
+                <line number="57" hits="27" branch="False" />
+                <line number="59" hits="27" branch="False" />
+                <line number="60" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="27" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="25" hits="27" branch="False" />
+            <line number="26" hits="3" branch="False" />
+            <line number="27" hits="3" branch="False" />
+            <line number="28" hits="3" branch="False" />
+            <line number="29" hits="1" branch="False" />
+            <line number="30" hits="1" branch="False" />
+            <line number="31" hits="27" branch="False" />
+            <line number="32" hits="27" branch="False" />
+            <line number="33" hits="2" branch="False" />
+            <line number="34" hits="2" branch="False" />
+            <line number="35" hits="2" branch="False" />
+            <line number="36" hits="27" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="1" branch="False" />
+            <line number="39" hits="1" branch="False" />
+            <line number="40" hits="27" branch="False" />
+            <line number="41" hits="27" branch="False" />
+            <line number="42" hits="1" branch="False" />
+            <line number="43" hits="1" branch="False" />
+            <line number="44" hits="1" branch="False" />
+            <line number="45" hits="1" branch="False" />
+            <line number="46" hits="1" branch="False" />
+            <line number="47" hits="0" branch="False" />
+            <line number="48" hits="0" branch="False" />
+            <line number="49" hits="0" branch="False" />
+            <line number="50" hits="0" branch="False" />
+            <line number="51" hits="1" branch="False" />
+            <line number="52" hits="27" branch="False" />
+            <line number="53" hits="1" branch="False" />
+            <line number="54" hits="3" branch="False" />
+            <line number="55" hits="27" branch="False" />
+            <line number="56" hits="27" branch="False" />
+            <line number="57" hits="27" branch="False" />
+            <line number="59" hits="27" branch="False" />
+            <line number="60" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapGetPostEndpointExtension/&lt;&gt;c/&lt;&lt;MapGetPostEndpoint&gt;b__0_0&gt;d" filename="Blogging.Api/Endpoints/Posts/MapGetPostEndpointExtension.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods />
+          <lines />
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapListPostsEndpointExtension" filename="Blogging.Api/Endpoints/Posts/MapListPostsEndpointExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapListPostsEndpoint" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="27" branch="False" />
+                <line number="19" hits="27" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="3" branch="False" />
+                <line number="25" hits="3" branch="False" />
+                <line number="26" hits="3" branch="False" />
+                <line number="27" hits="3" branch="False" />
+                <line number="28" hits="27" branch="False" />
+                <line number="29" hits="4" branch="False" />
+                <line number="30" hits="4" branch="False" />
+                <line number="31" hits="4" branch="False" />
+                <line number="32" hits="4" branch="False" />
+                <line number="33" hits="3" branch="False" />
+                <line number="34" hits="27" branch="False" />
+                <line number="35" hits="27" branch="False" />
+                <line number="37" hits="27" branch="False" />
+                <line number="38" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="27" branch="False" />
+            <line number="19" hits="27" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="3" branch="False" />
+            <line number="25" hits="3" branch="False" />
+            <line number="26" hits="3" branch="False" />
+            <line number="27" hits="3" branch="False" />
+            <line number="28" hits="27" branch="False" />
+            <line number="29" hits="4" branch="False" />
+            <line number="30" hits="4" branch="False" />
+            <line number="31" hits="4" branch="False" />
+            <line number="32" hits="4" branch="False" />
+            <line number="33" hits="3" branch="False" />
+            <line number="34" hits="27" branch="False" />
+            <line number="35" hits="27" branch="False" />
+            <line number="37" hits="27" branch="False" />
+            <line number="38" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapPostsEndpointsExtension" filename="Blogging.Api/Endpoints/Posts/MapPostsEndpointsExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapPostsEndpoints" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="27" branch="False" />
+                <line number="16" hits="27" branch="False" />
+                <line number="18" hits="27" branch="False" />
+                <line number="19" hits="27" branch="False" />
+                <line number="20" hits="27" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="25" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="27" branch="False" />
+            <line number="16" hits="27" branch="False" />
+            <line number="18" hits="27" branch="False" />
+            <line number="19" hits="27" branch="False" />
+            <line number="20" hits="27" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="25" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapSearchPostsEndpointExtension" filename="Blogging.Api/Endpoints/Posts/MapSearchPostsEndpointExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MapSearchPostsEndpoint" signature="(Microsoft.AspNetCore.Routing.IEndpointRouteBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="27" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="25" hits="27" branch="False" />
+                <line number="26" hits="27" branch="False" />
+                <line number="27" hits="27" branch="False" />
+                <line number="28" hits="27" branch="False" />
+                <line number="29" hits="5" branch="False" />
+                <line number="30" hits="27" branch="False" />
+                <line number="31" hits="5" branch="False" />
+                <line number="32" hits="5" branch="False" />
+                <line number="33" hits="5" branch="False" />
+                <line number="34" hits="5" branch="False" />
+                <line number="35" hits="5" branch="False" />
+                <line number="36" hits="5" branch="False" />
+                <line number="37" hits="5" branch="False" />
+                <line number="38" hits="5" branch="False" />
+                <line number="39" hits="5" branch="False" />
+                <line number="40" hits="5" branch="False" />
+                <line number="41" hits="5" branch="False" />
+                <line number="42" hits="5" branch="False" />
+                <line number="43" hits="4" branch="False" />
+                <line number="44" hits="4" branch="False" />
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="5" branch="False" />
+                <line number="47" hits="5" branch="False" />
+                <line number="48" hits="5" branch="False" />
+                <line number="49" hits="5" branch="False" />
+                <line number="50" hits="27" branch="False" />
+                <line number="51" hits="3" branch="False" />
+                <line number="52" hits="3" branch="False" />
+                <line number="53" hits="3" branch="False" />
+                <line number="54" hits="3" branch="False" />
+                <line number="55" hits="3" branch="False" />
+                <line number="56" hits="3" branch="False" />
+                <line number="57" hits="3" branch="False" />
+                <line number="58" hits="3" branch="False" />
+                <line number="59" hits="27" branch="False" />
+                <line number="60" hits="2" branch="False" />
+                <line number="61" hits="2" branch="False" />
+                <line number="62" hits="2" branch="False" />
+                <line number="63" hits="27" branch="False" />
+                <line number="64" hits="5" branch="False" />
+                <line number="65" hits="27" branch="False" />
+                <line number="66" hits="27" branch="False" />
+                <line number="67" hits="27" branch="False" />
+                <line number="68" hits="27" branch="False" />
+                <line number="70" hits="27" branch="False" />
+                <line number="71" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="20" hits="27" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="25" hits="27" branch="False" />
+            <line number="26" hits="27" branch="False" />
+            <line number="27" hits="27" branch="False" />
+            <line number="28" hits="27" branch="False" />
+            <line number="29" hits="5" branch="False" />
+            <line number="30" hits="27" branch="False" />
+            <line number="31" hits="5" branch="False" />
+            <line number="32" hits="5" branch="False" />
+            <line number="33" hits="5" branch="False" />
+            <line number="34" hits="5" branch="False" />
+            <line number="35" hits="5" branch="False" />
+            <line number="36" hits="5" branch="False" />
+            <line number="37" hits="5" branch="False" />
+            <line number="38" hits="5" branch="False" />
+            <line number="39" hits="5" branch="False" />
+            <line number="40" hits="5" branch="False" />
+            <line number="41" hits="5" branch="False" />
+            <line number="42" hits="5" branch="False" />
+            <line number="43" hits="4" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="5" branch="False" />
+            <line number="47" hits="5" branch="False" />
+            <line number="48" hits="5" branch="False" />
+            <line number="49" hits="5" branch="False" />
+            <line number="50" hits="27" branch="False" />
+            <line number="51" hits="3" branch="False" />
+            <line number="52" hits="3" branch="False" />
+            <line number="53" hits="3" branch="False" />
+            <line number="54" hits="3" branch="False" />
+            <line number="55" hits="3" branch="False" />
+            <line number="56" hits="3" branch="False" />
+            <line number="57" hits="3" branch="False" />
+            <line number="58" hits="3" branch="False" />
+            <line number="59" hits="27" branch="False" />
+            <line number="60" hits="2" branch="False" />
+            <line number="61" hits="2" branch="False" />
+            <line number="62" hits="2" branch="False" />
+            <line number="63" hits="27" branch="False" />
+            <line number="64" hits="5" branch="False" />
+            <line number="65" hits="27" branch="False" />
+            <line number="66" hits="27" branch="False" />
+            <line number="67" hits="27" branch="False" />
+            <line number="68" hits="27" branch="False" />
+            <line number="70" hits="27" branch="False" />
+            <line number="71" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Endpoints.Posts.MapSearchPostsEndpointExtension/&lt;&gt;c/&lt;&lt;MapSearchPostsEndpoint&gt;b__0_0&gt;d" filename="Blogging.Api/Endpoints/Posts/MapSearchPostsEndpointExtension.cs" line-rate="1" branch-rate="0.5" complexity="2">
+          <methods />
+          <lines />
+        </class>
+        <class name="Blogging.Api.DependencyInjection.AddBloggingApiExtension" filename="Blogging.Api/DependencyInjection/WebApplicationBuilderExtensions/AddBloggingApiExtension.cs" line-rate="0.9129999999999999" branch-rate="1" complexity="1">
+          <methods>
+            <method name="AddBloggingApi" signature="(Microsoft.AspNetCore.Builder.WebApplicationBuilder)" line-rate="0.9129999999999999" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="27" branch="False" />
+                <line number="18" hits="27" branch="False" />
+                <line number="20" hits="27" branch="False" />
+                <line number="21" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="0" branch="False" />
+                <line number="25" hits="0" branch="False" />
+                <line number="26" hits="27" branch="False" />
+                <line number="27" hits="54" branch="False" />
+                <line number="28" hits="27" branch="False" />
+                <line number="29" hits="27" branch="False" />
+                <line number="30" hits="27" branch="False" />
+                <line number="31" hits="24" branch="False" />
+                <line number="32" hits="24" branch="False" />
+                <line number="33" hits="24" branch="False" />
+                <line number="34" hits="24" branch="False" />
+                <line number="35" hits="24" branch="False" />
+                <line number="36" hits="24" branch="False" />
+                <line number="37" hits="24" branch="False" />
+                <line number="38" hits="51" branch="False" />
+                <line number="40" hits="27" branch="False" />
+                <line number="41" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="27" branch="False" />
+            <line number="18" hits="27" branch="False" />
+            <line number="20" hits="27" branch="False" />
+            <line number="21" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="0" branch="False" />
+            <line number="25" hits="0" branch="False" />
+            <line number="26" hits="27" branch="False" />
+            <line number="27" hits="54" branch="False" />
+            <line number="28" hits="27" branch="False" />
+            <line number="29" hits="27" branch="False" />
+            <line number="30" hits="27" branch="False" />
+            <line number="31" hits="24" branch="False" />
+            <line number="32" hits="24" branch="False" />
+            <line number="33" hits="24" branch="False" />
+            <line number="34" hits="24" branch="False" />
+            <line number="35" hits="24" branch="False" />
+            <line number="36" hits="24" branch="False" />
+            <line number="37" hits="24" branch="False" />
+            <line number="38" hits="51" branch="False" />
+            <line number="40" hits="27" branch="False" />
+            <line number="41" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.DependencyInjection.AddBloggingDomainExtension" filename="Blogging.Api/DependencyInjection/WebApplicationBuilderExtensions/AddBloggingDomainExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="AddBloggingDomain" signature="(Microsoft.AspNetCore.Builder.WebApplicationBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="28" branch="False" />
+                <line number="18" hits="28" branch="False" />
+                <line number="20" hits="28" branch="False" />
+                <line number="21" hits="28" branch="False" />
+                <line number="22" hits="28" branch="False" />
+                <line number="23" hits="56" branch="False" />
+                <line number="25" hits="28" branch="False" />
+                <line number="26" hits="28" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="28" branch="False" />
+            <line number="18" hits="28" branch="False" />
+            <line number="20" hits="28" branch="False" />
+            <line number="21" hits="28" branch="False" />
+            <line number="22" hits="28" branch="False" />
+            <line number="23" hits="56" branch="False" />
+            <line number="25" hits="28" branch="False" />
+            <line number="26" hits="28" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.DependencyInjection.UseBloggingApiAsyncExtension/&lt;&gt;c" filename="Blogging.Api/DependencyInjection/WebApplicationExtensions/UseBloggingApiAsyncExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="&lt;UseBloggingApiAsync&gt;b__0_0" signature="(Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIOptions)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="27" branch="False" />
+                <line number="31" hits="27" branch="False" />
+                <line number="32" hits="27" branch="False" />
+                <line number="33" hits="27" branch="False" />
+                <line number="34" hits="54" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="27" branch="False" />
+            <line number="31" hits="27" branch="False" />
+            <line number="32" hits="27" branch="False" />
+            <line number="33" hits="27" branch="False" />
+            <line number="34" hits="54" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.DependencyInjection.UseBloggingApiAsyncExtension/&lt;UseBloggingApiAsync&gt;d__0" filename="Blogging.Api/DependencyInjection/WebApplicationExtensions/UseBloggingApiAsyncExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="27" branch="False" />
+                <line number="20" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="26" hits="27" branch="False" />
+                <line number="28" hits="27" branch="False" />
+                <line number="29" hits="27" branch="False" />
+                <line number="36" hits="27" branch="False" />
+                <line number="37" hits="27" branch="False" />
+                <line number="38" hits="27" branch="False" />
+                <line number="39" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="27" branch="False" />
+            <line number="20" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="26" hits="27" branch="False" />
+            <line number="28" hits="27" branch="False" />
+            <line number="29" hits="27" branch="False" />
+            <line number="36" hits="27" branch="False" />
+            <line number="37" hits="27" branch="False" />
+            <line number="38" hits="27" branch="False" />
+            <line number="39" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.DependencyInjection.UseBloggingAsyncExtension/&lt;UseBloggingAsync&gt;d__0" filename="Blogging.Api/DependencyInjection/WebApplicationExtensions/UseBloggingAsyncExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="27" branch="False" />
+                <line number="20" hits="27" branch="False" />
+                <line number="22" hits="27" branch="False" />
+                <line number="23" hits="27" branch="False" />
+                <line number="24" hits="27" branch="False" />
+                <line number="25" hits="27" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="27" branch="False" />
+            <line number="20" hits="27" branch="False" />
+            <line number="22" hits="27" branch="False" />
+            <line number="23" hits="27" branch="False" />
+            <line number="24" hits="27" branch="False" />
+            <line number="25" hits="27" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Api.Contracts.ApiErrorResponse" filename="Blogging.Api/Contracts/ApiErrorResponse.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Error" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="28" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="28" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Blogging.Domain" line-rate="0.9754999999999999" branch-rate="0.9782" complexity="129">
+      <classes>
+        <class name="Blogging.Domain.Validation.PostValidationRules" filename="Blogging.Domain/Validation/PostValidationRules.cs" line-rate="1" branch-rate="1" complexity="7">
+          <methods>
+            <method name="NormalizeTitle" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="14" branch="False" />
+                <line number="19" hits="14" branch="False" />
+                <line number="20" hits="12" branch="False" />
+              </lines>
+            </method>
+            <method name="NormalizeContent" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="28" hits="12" branch="False" />
+                <line number="29" hits="12" branch="False" />
+                <line number="30" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="NormalizeCommentContent" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="38" hits="6" branch="False" />
+                <line number="39" hits="6" branch="False" />
+                <line number="40" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="NormalizeRequired" signature="(System.String,System.String,System.Int32)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="43" hits="32" branch="False" />
+                <line number="44" hits="32" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="9" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="45" hits="4" branch="False" />
+                <line number="46" hits="4" branch="False" />
+                <line number="49" hits="28" branch="False" />
+                <line number="50" hits="28" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="48" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="2" branch="False" />
+                <line number="53" hits="2" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="57" hits="26" branch="False" />
+                <line number="58" hits="26" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="14" branch="False" />
+            <line number="19" hits="14" branch="False" />
+            <line number="20" hits="12" branch="False" />
+            <line number="28" hits="12" branch="False" />
+            <line number="29" hits="12" branch="False" />
+            <line number="30" hits="10" branch="False" />
+            <line number="38" hits="6" branch="False" />
+            <line number="39" hits="6" branch="False" />
+            <line number="40" hits="4" branch="False" />
+            <line number="43" hits="32" branch="False" />
+            <line number="44" hits="32" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="9" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="45" hits="4" branch="False" />
+            <line number="46" hits="4" branch="False" />
+            <line number="49" hits="28" branch="False" />
+            <line number="50" hits="28" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="48" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="2" branch="False" />
+            <line number="53" hits="2" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="57" hits="26" branch="False" />
+            <line number="58" hits="26" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.OrderClause`1" filename="Blogging.Domain/Specifications/OrderClause.cs" line-rate="1" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_KeySelector" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Descending" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="26" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;TEntity,System.Object&gt;&gt;,System.Boolean)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="21" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="4" branch="False" />
+            <line number="11" hits="26" branch="False" />
+            <line number="9" hits="21" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.Specification`1" filename="Blogging.Domain/Specifications/Specification.cs" line-rate="0" branch-rate="1" complexity="3">
+          <methods>
+            <method name="get_Orderings" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageNumber" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="0" branch="False" />
+            <line number="16" hits="0" branch="False" />
+            <line number="18" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.SpecificationExtensions" filename="Blogging.Domain/Specifications/SpecificationExtensions.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="And" signature="(Blogging.Domain.Specifications.Specification`1&lt;TEntity&gt;,Blogging.Domain.Specifications.Specification`1&lt;TEntity&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="21" hits="16" branch="False" />
+                <line number="22" hits="16" branch="False" />
+                <line number="23" hits="16" branch="False" />
+                <line number="24" hits="16" branch="False" />
+                <line number="25" hits="16" branch="False" />
+                <line number="26" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name="WithQueryOptions" signature="(Blogging.Domain.Specifications.Specification`1&lt;TEntity&gt;,System.Collections.Generic.IReadOnlyList`1&lt;Blogging.Domain.Specifications.OrderClause`1&lt;TEntity&gt;&gt;,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="43" hits="15" branch="False" />
+                <line number="44" hits="15" branch="False" />
+                <line number="45" hits="15" branch="False" />
+                <line number="46" hits="15" branch="False" />
+                <line number="47" hits="15" branch="False" />
+                <line number="48" hits="15" branch="False" />
+                <line number="49" hits="15" branch="False" />
+                <line number="50" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="16" branch="False" />
+            <line number="22" hits="16" branch="False" />
+            <line number="23" hits="16" branch="False" />
+            <line number="24" hits="16" branch="False" />
+            <line number="25" hits="16" branch="False" />
+            <line number="26" hits="16" branch="False" />
+            <line number="43" hits="15" branch="False" />
+            <line number="44" hits="15" branch="False" />
+            <line number="45" hits="15" branch="False" />
+            <line number="46" hits="15" branch="False" />
+            <line number="47" hits="15" branch="False" />
+            <line number="48" hits="15" branch="False" />
+            <line number="49" hits="15" branch="False" />
+            <line number="50" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.SpecificationExtensions/ComposedSpecification`1" filename="Blogging.Domain/Specifications/SpecificationExtensions.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="56" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;TEntity,System.Boolean&gt;&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="52" hits="16" branch="False" />
+                <line number="53" hits="16" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="56" hits="16" branch="False" />
+            <line number="52" hits="16" branch="False" />
+            <line number="53" hits="16" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.SpecificationExtensions/ConfiguredSpecification`1" filename="Blogging.Domain/Specifications/SpecificationExtensions.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="66" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Orderings" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="68" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageNumber" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="70" hits="7" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="72" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;TEntity,System.Boolean&gt;&gt;,System.Collections.Generic.IReadOnlyList`1&lt;Blogging.Domain.Specifications.OrderClause`1&lt;TEntity&gt;&gt;,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="59" hits="15" branch="False" />
+                <line number="60" hits="15" branch="False" />
+                <line number="61" hits="15" branch="False" />
+                <line number="62" hits="15" branch="False" />
+                <line number="63" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="66" hits="8" branch="False" />
+            <line number="68" hits="7" branch="False" />
+            <line number="70" hits="7" branch="False" />
+            <line number="72" hits="10" branch="False" />
+            <line number="59" hits="15" branch="False" />
+            <line number="60" hits="15" branch="False" />
+            <line number="61" hits="15" branch="False" />
+            <line number="62" hits="15" branch="False" />
+            <line number="63" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.ExpressionComposer" filename="Blogging.Domain/Specifications/SpecificationExtensions.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="And" signature="(System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;TEntity,System.Boolean&gt;&gt;,System.Linq.Expressions.Expression`1&lt;System.Func`2&lt;TEntity,System.Boolean&gt;&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="81" hits="16" branch="False" />
+                <line number="82" hits="16" branch="False" />
+                <line number="83" hits="16" branch="False" />
+                <line number="84" hits="16" branch="False" />
+                <line number="85" hits="16" branch="False" />
+                <line number="86" hits="16" branch="False" />
+                <line number="88" hits="16" branch="False" />
+                <line number="89" hits="16" branch="False" />
+                <line number="90" hits="16" branch="False" />
+                <line number="91" hits="16" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="81" hits="16" branch="False" />
+            <line number="82" hits="16" branch="False" />
+            <line number="83" hits="16" branch="False" />
+            <line number="84" hits="16" branch="False" />
+            <line number="85" hits="16" branch="False" />
+            <line number="86" hits="16" branch="False" />
+            <line number="88" hits="16" branch="False" />
+            <line number="89" hits="16" branch="False" />
+            <line number="90" hits="16" branch="False" />
+            <line number="91" hits="16" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Specifications.ExpressionComposer/ParameterReplacer" filename="Blogging.Domain/Specifications/SpecificationExtensions.cs" line-rate="1" branch-rate="0.5" complexity="3">
+          <methods>
+            <method name="VisitParameter" signature="(System.Linq.Expressions.ParameterExpression)" line-rate="1" branch-rate="0.5" complexity="2">
+              <lines>
+                <line number="98" hits="33" branch="False" />
+                <line number="99" hits="33" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="8" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="100" hits="33" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Linq.Expressions.ParameterExpression,System.Linq.Expressions.ParameterExpression)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="93" hits="32" branch="False" />
+                <line number="94" hits="32" branch="False" />
+                <line number="95" hits="32" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="98" hits="33" branch="False" />
+            <line number="99" hits="33" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="8" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="100" hits="33" branch="False" />
+            <line number="93" hits="32" branch="False" />
+            <line number="94" hits="32" branch="False" />
+            <line number="95" hits="32" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.BlogPostDetail" filename="Blogging.Domain/Posts/BlogPostDetail.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.String,System.String,System.Collections.Generic.IReadOnlyList`1&lt;Blogging.Domain.Posts.CommentSummary&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="1" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="10" hits="3" branch="False" />
+            <line number="6" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.BlogPostService" filename="Blogging.Domain/Posts/BlogPostService.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="ListAsync" signature="(System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="19" hits="4" branch="False" />
+                <line number="20" hits="4" branch="False" />
+                <line number="21" hits="4" branch="False" />
+                <line number="22" hits="4" branch="False" />
+                <line number="23" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="CreateAsync" signature="(Blogging.Domain.Posts.CreateBlogPostCommand,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="34" hits="13" branch="False" />
+                <line number="35" hits="13" branch="False" />
+                <line number="36" hits="13" branch="False" />
+                <line number="37" hits="13" branch="False" />
+                <line number="38" hits="13" branch="False" />
+                <line number="39" hits="13" branch="False" />
+                <line number="40" hits="13" branch="False" />
+                <line number="42" hits="10" branch="False" />
+                <line number="43" hits="10" branch="False" />
+              </lines>
+            </method>
+            <method name="GetByIdAsync" signature="(System.Int32,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="54" hits="3" branch="False" />
+                <line number="55" hits="3" branch="False" />
+                <line number="56" hits="3" branch="False" />
+                <line number="57" hits="3" branch="False" />
+                <line number="58" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="CreateCommentAsync" signature="(System.Int32,Blogging.Domain.Posts.CreateCommentCommand,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="71" hits="6" branch="False" />
+                <line number="72" hits="6" branch="False" />
+                <line number="73" hits="5" branch="False" />
+                <line number="74" hits="5" branch="False" />
+                <line number="75" hits="5" branch="False" />
+                <line number="76" hits="5" branch="False" />
+                <line number="77" hits="5" branch="False" />
+                <line number="79" hits="4" branch="False" />
+                <line number="80" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Blogging.Domain.Posts.IBlogPostRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="30" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="19" hits="4" branch="False" />
+            <line number="20" hits="4" branch="False" />
+            <line number="21" hits="4" branch="False" />
+            <line number="22" hits="4" branch="False" />
+            <line number="23" hits="4" branch="False" />
+            <line number="34" hits="13" branch="False" />
+            <line number="35" hits="13" branch="False" />
+            <line number="36" hits="13" branch="False" />
+            <line number="37" hits="13" branch="False" />
+            <line number="38" hits="13" branch="False" />
+            <line number="39" hits="13" branch="False" />
+            <line number="40" hits="13" branch="False" />
+            <line number="42" hits="10" branch="False" />
+            <line number="43" hits="10" branch="False" />
+            <line number="54" hits="3" branch="False" />
+            <line number="55" hits="3" branch="False" />
+            <line number="56" hits="3" branch="False" />
+            <line number="57" hits="3" branch="False" />
+            <line number="58" hits="3" branch="False" />
+            <line number="71" hits="6" branch="False" />
+            <line number="72" hits="6" branch="False" />
+            <line number="73" hits="5" branch="False" />
+            <line number="74" hits="5" branch="False" />
+            <line number="75" hits="5" branch="False" />
+            <line number="76" hits="5" branch="False" />
+            <line number="77" hits="5" branch="False" />
+            <line number="79" hits="4" branch="False" />
+            <line number="80" hits="4" branch="False" />
+            <line number="10" hits="30" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.BlogPostSummary" filename="Blogging.Domain/Posts/BlogPostSummary.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="13" branch="False" />
+              </lines>
+            </method>
+            <method name="get_CommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="29" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.String,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="16" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="22" branch="False" />
+            <line number="8" hits="13" branch="False" />
+            <line number="9" hits="29" branch="False" />
+            <line number="6" hits="16" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.CommentSummary" filename="Blogging.Domain/Posts/CommentSummary.cs" line-rate="1" branch-rate="1" complexity="4">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PostId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.Int32,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="2" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="5" branch="False" />
+            <line number="6" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.CreateBlogPostCommand" filename="Blogging.Domain/Posts/CreateBlogPostCommand.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="47" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="43" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="47" branch="False" />
+            <line number="16" hits="43" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.CreateCommentCommand" filename="Blogging.Domain/Posts/CreateCommentCommand.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="18" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="18" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.PagedResult`1" filename="Blogging.Domain/Posts/PagedResult.cs" line-rate="1" branch-rate="1" complexity="5">
+          <methods>
+            <method name="get_Items" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Page" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="4" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name="get_TotalCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="8" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Collections.Generic.IReadOnlyList`1&lt;T&gt;,System.Int32,System.Int32,System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="7" hits="3" branch="False" />
+            <line number="8" hits="4" branch="False" />
+            <line number="9" hits="3" branch="False" />
+            <line number="10" hits="8" branch="False" />
+            <line number="6" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.PostFilter" filename="Blogging.Domain/Posts/PostFilter.cs" line-rate="1" branch-rate="1" complexity="9">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="26" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="24" branch="False" />
+              </lines>
+            </method>
+            <method name="get_HasComments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="25" branch="False" />
+              </lines>
+            </method>
+            <method name="get_MinCommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="48" branch="False" />
+              </lines>
+            </method>
+            <method name="get_MaxCommentCount" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="45" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Page" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="20" hits="53" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PageSize" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="22" hits="52" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Sorts" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="24" hits="45" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="8" hits="22" branch="False" />
+            <line number="10" hits="26" branch="False" />
+            <line number="12" hits="24" branch="False" />
+            <line number="14" hits="25" branch="False" />
+            <line number="16" hits="48" branch="False" />
+            <line number="18" hits="45" branch="False" />
+            <line number="20" hits="53" branch="False" />
+            <line number="22" hits="52" branch="False" />
+            <line number="24" hits="45" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.PostSort" filename="Blogging.Domain/Posts/PostFilter.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Field" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="30" hits="36" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="30" hits="36" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.PostSearchService" filename="Blogging.Domain/Posts/PostSearchService.cs" line-rate="1" branch-rate="1" complexity="19">
+          <methods>
+            <method name="SearchAsync" signature="(Blogging.Domain.Posts.PostFilter,System.Threading.CancellationToken)" line-rate="1" branch-rate="1" complexity="18">
+              <lines>
+                <line number="17" hits="11" branch="False" />
+                <line number="18" hits="11" branch="False" />
+                <line number="20" hits="11" branch="True" condition-coverage="100% (8/8)">
+                  <conditions>
+                    <condition number="27" type="jump" coverage="100%" />
+                    <condition number="37" type="jump" coverage="100%" />
+                    <condition number="53" type="jump" coverage="100%" />
+                    <condition number="73" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="21" hits="1" branch="False" />
+                <line number="22" hits="1" branch="False" />
+                <line number="25" hits="10" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="140" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="26" hits="2" branch="False" />
+                <line number="27" hits="2" branch="False" />
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="2" branch="False" />
+                <line number="32" hits="8" branch="True" condition-coverage="100% (8/8)">
+                  <conditions>
+                    <condition number="176" type="jump" coverage="100%" />
+                    <condition number="189" type="jump" coverage="100%" />
+                    <condition number="195" type="jump" coverage="100%" />
+                    <condition number="217" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="33" hits="2" branch="False" />
+                <line number="34" hits="2" branch="False" />
+                <line number="37" hits="6" branch="False" />
+                <line number="38" hits="6" branch="False" />
+                <line number="39" hits="6" branch="False" />
+                <line number="40" hits="5" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Blogging.Domain.Posts.IBlogPostRepository)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="6" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="17" hits="11" branch="False" />
+            <line number="18" hits="11" branch="False" />
+            <line number="20" hits="11" branch="True" condition-coverage="100% (8/8)">
+              <conditions>
+                <condition number="27" type="jump" coverage="100%" />
+                <condition number="37" type="jump" coverage="100%" />
+                <condition number="53" type="jump" coverage="100%" />
+                <condition number="73" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="21" hits="1" branch="False" />
+            <line number="22" hits="1" branch="False" />
+            <line number="25" hits="10" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="140" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="26" hits="2" branch="False" />
+            <line number="27" hits="2" branch="False" />
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="2" branch="False" />
+            <line number="32" hits="8" branch="True" condition-coverage="100% (8/8)">
+              <conditions>
+                <condition number="176" type="jump" coverage="100%" />
+                <condition number="189" type="jump" coverage="100%" />
+                <condition number="195" type="jump" coverage="100%" />
+                <condition number="217" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="33" hits="2" branch="False" />
+            <line number="34" hits="2" branch="False" />
+            <line number="37" hits="6" branch="False" />
+            <line number="38" hits="6" branch="False" />
+            <line number="39" hits="6" branch="False" />
+            <line number="40" hits="5" branch="False" />
+            <line number="6" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.PostSpecifications" filename="Blogging.Domain/Posts/PostSpecifications.cs" line-rate="1" branch-rate="1" complexity="22">
+          <methods>
+            <method name="FromFilter" signature="(Blogging.Domain.Posts.PostFilter)" line-rate="1" branch-rate="1" complexity="14">
+              <lines>
+                <line number="18" hits="16" branch="False" />
+                <line number="19" hits="16" branch="False" />
+                <line number="21" hits="16" branch="False" />
+                <line number="23" hits="16" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="41" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="24" hits="3" branch="False" />
+                <line number="25" hits="3" branch="False" />
+                <line number="26" hits="3" branch="False" />
+                <line number="28" hits="16" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="89" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="29" hits="3" branch="False" />
+                <line number="30" hits="3" branch="False" />
+                <line number="31" hits="3" branch="False" />
+                <line number="32" hits="3" branch="False" />
+                <line number="34" hits="16" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="134" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="35" hits="2" branch="False" />
+                <line number="36" hits="2" branch="False" />
+                <line number="37" hits="2" branch="False" />
+                <line number="38" hits="2" branch="False" />
+                <line number="40" hits="16" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="186" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="41" hits="3" branch="False" />
+                <line number="42" hits="3" branch="False" />
+                <line number="43" hits="3" branch="False" />
+                <line number="44" hits="3" branch="False" />
+                <line number="46" hits="16" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="241" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="47" hits="3" branch="False" />
+                <line number="48" hits="3" branch="False" />
+                <line number="49" hits="3" branch="False" />
+                <line number="50" hits="3" branch="False" />
+                <line number="52" hits="16" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="295" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="53" hits="2" branch="False" />
+                <line number="54" hits="2" branch="False" />
+                <line number="55" hits="2" branch="False" />
+                <line number="56" hits="2" branch="False" />
+                <line number="58" hits="16" branch="False" />
+                <line number="59" hits="15" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="382" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="60" hits="10" branch="False" />
+                <line number="61" hits="10" branch="False" />
+                <line number="62" hits="10" branch="False" />
+                <line number="64" hits="15" branch="False" />
+                <line number="65" hits="15" branch="False" />
+              </lines>
+            </method>
+            <method name="CreateOrderClause" signature="(Blogging.Domain.Posts.PostSort)" line-rate="1" branch-rate="1" complexity="8">
+              <lines>
+                <line number="68" hits="12" branch="False" />
+                <line number="69" hits="12" branch="False" />
+                <line number="71" hits="12" branch="True" condition-coverage="100% (8/8)">
+                  <conditions>
+                    <condition number="33" type="jump" coverage="100%" />
+                    <condition number="46" type="jump" coverage="100%" />
+                    <condition number="59" type="jump" coverage="100%" />
+                    <condition number="75" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="72" hits="12" branch="False" />
+                <line number="73" hits="1" branch="False" />
+                <line number="74" hits="4" branch="False" />
+                <line number="75" hits="2" branch="False" />
+                <line number="76" hits="4" branch="False" />
+                <line number="77" hits="4" branch="False" />
+                <line number="78" hits="4" branch="False" />
+                <line number="79" hits="1" branch="False" />
+                <line number="80" hits="12" branch="False" />
+                <line number="81" hits="11" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="16" branch="False" />
+            <line number="19" hits="16" branch="False" />
+            <line number="21" hits="16" branch="False" />
+            <line number="23" hits="16" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="41" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="24" hits="3" branch="False" />
+            <line number="25" hits="3" branch="False" />
+            <line number="26" hits="3" branch="False" />
+            <line number="28" hits="16" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="89" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="29" hits="3" branch="False" />
+            <line number="30" hits="3" branch="False" />
+            <line number="31" hits="3" branch="False" />
+            <line number="32" hits="3" branch="False" />
+            <line number="34" hits="16" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="134" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="35" hits="2" branch="False" />
+            <line number="36" hits="2" branch="False" />
+            <line number="37" hits="2" branch="False" />
+            <line number="38" hits="2" branch="False" />
+            <line number="40" hits="16" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="186" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="41" hits="3" branch="False" />
+            <line number="42" hits="3" branch="False" />
+            <line number="43" hits="3" branch="False" />
+            <line number="44" hits="3" branch="False" />
+            <line number="46" hits="16" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="241" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="47" hits="3" branch="False" />
+            <line number="48" hits="3" branch="False" />
+            <line number="49" hits="3" branch="False" />
+            <line number="50" hits="3" branch="False" />
+            <line number="52" hits="16" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="295" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="53" hits="2" branch="False" />
+            <line number="54" hits="2" branch="False" />
+            <line number="55" hits="2" branch="False" />
+            <line number="56" hits="2" branch="False" />
+            <line number="58" hits="16" branch="False" />
+            <line number="59" hits="15" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="382" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="60" hits="10" branch="False" />
+            <line number="61" hits="10" branch="False" />
+            <line number="62" hits="10" branch="False" />
+            <line number="64" hits="15" branch="False" />
+            <line number="65" hits="15" branch="False" />
+            <line number="68" hits="12" branch="False" />
+            <line number="69" hits="12" branch="False" />
+            <line number="71" hits="12" branch="True" condition-coverage="100% (8/8)">
+              <conditions>
+                <condition number="33" type="jump" coverage="100%" />
+                <condition number="46" type="jump" coverage="100%" />
+                <condition number="59" type="jump" coverage="100%" />
+                <condition number="75" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="72" hits="12" branch="False" />
+            <line number="73" hits="1" branch="False" />
+            <line number="74" hits="4" branch="False" />
+            <line number="75" hits="2" branch="False" />
+            <line number="76" hits="4" branch="False" />
+            <line number="77" hits="4" branch="False" />
+            <line number="78" hits="4" branch="False" />
+            <line number="79" hits="1" branch="False" />
+            <line number="80" hits="12" branch="False" />
+            <line number="81" hits="11" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.AllPostsSpecification" filename="Blogging.Domain/Posts/Specifications/AllPostsSpecification.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="15" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.HasCommentsSpecification" filename="Blogging.Domain/Posts/Specifications/HasCommentsSpecification.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Boolean)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="3" branch="False" />
+            <line number="7" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.MaximumCommentCountSpecification" filename="Blogging.Domain/Posts/Specifications/MaximumCommentCountSpecification.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="2" branch="False" />
+            <line number="7" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.MinimumCommentCountSpecification" filename="Blogging.Domain/Posts/Specifications/MinimumCommentCountSpecification.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="10" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="10" hits="3" branch="False" />
+            <line number="7" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.PostContentSpecification" filename="Blogging.Domain/Posts/Specifications/PostContentSpecification.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="2" branch="False" />
+            <line number="7" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.PostIdSpecification" filename="Blogging.Domain/Posts/Specifications/PostIdSpecification.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="9" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="9" hits="3" branch="False" />
+            <line number="7" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Posts.Specifications.PostTitleSpecification" filename="Blogging.Domain/Posts/Specifications/PostTitleSpecification.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_Criteria" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="3" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="7" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="3" branch="False" />
+            <line number="7" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Entities.BlogPost" filename="Blogging.Domain/Entities/BlogPost.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="11" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Title" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="35" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="25" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1" branch="False" />
+                <line number="9" hits="1" branch="False" />
+                <line number="10" hits="1" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.String,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="11" branch="False" />
+                <line number="18" hits="11" branch="False" />
+                <line number="19" hits="11" branch="False" />
+                <line number="20" hits="11" branch="False" />
+                <line number="21" hits="11" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="11" branch="False" />
+            <line number="25" hits="35" branch="False" />
+            <line number="27" hits="25" branch="False" />
+            <line number="29" hits="16" branch="False" />
+            <line number="8" hits="1" branch="False" />
+            <line number="9" hits="1" branch="False" />
+            <line number="10" hits="1" branch="False" />
+            <line number="17" hits="11" branch="False" />
+            <line number="18" hits="11" branch="False" />
+            <line number="19" hits="11" branch="False" />
+            <line number="20" hits="11" branch="False" />
+            <line number="21" hits="11" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.Entities.Comment" filename="Blogging.Domain/Entities/Comment.cs" line-rate="0.75" branch-rate="1" complexity="6">
+          <methods>
+            <method name="get_Id" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name="get_PostId" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="25" hits="9" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Content" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="27" hits="16" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Post" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="29" hits="6" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="()" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="0" branch="False" />
+                <line number="9" hits="0" branch="False" />
+                <line number="10" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Int32,System.String)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="17" hits="6" branch="False" />
+                <line number="18" hits="6" branch="False" />
+                <line number="19" hits="6" branch="False" />
+                <line number="20" hits="6" branch="False" />
+                <line number="21" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="2" branch="False" />
+            <line number="25" hits="9" branch="False" />
+            <line number="27" hits="16" branch="False" />
+            <line number="29" hits="6" branch="False" />
+            <line number="8" hits="0" branch="False" />
+            <line number="9" hits="0" branch="False" />
+            <line number="10" hits="0" branch="False" />
+            <line number="17" hits="6" branch="False" />
+            <line number="18" hits="6" branch="False" />
+            <line number="19" hits="6" branch="False" />
+            <line number="20" hits="6" branch="False" />
+            <line number="21" hits="6" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Domain.DependencyInjection.AddBloggingDomainExtension" filename="Blogging.Domain/DependencyInjection/ServiceCollectionExtensions/AddBloggingDomainExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="AddBloggingDomain" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration,System.Action`2&lt;Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="23" hits="29" branch="False" />
+                <line number="24" hits="29" branch="False" />
+                <line number="25" hits="29" branch="False" />
+                <line number="26" hits="29" branch="False" />
+                <line number="28" hits="29" branch="False" />
+                <line number="29" hits="29" branch="False" />
+                <line number="30" hits="29" branch="False" />
+                <line number="31" hits="29" branch="False" />
+                <line number="32" hits="29" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="23" hits="29" branch="False" />
+            <line number="24" hits="29" branch="False" />
+            <line number="25" hits="29" branch="False" />
+            <line number="26" hits="29" branch="False" />
+            <line number="28" hits="29" branch="False" />
+            <line number="29" hits="29" branch="False" />
+            <line number="30" hits="29" branch="False" />
+            <line number="31" hits="29" branch="False" />
+            <line number="32" hits="29" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+    <package name="Blogging.Repository" line-rate="0.9643999999999999" branch-rate="0.875" complexity="34">
+      <classes>
+        <class name="Blogging.Repository.Posts.BlogPostRepository" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name=".ctor" signature="(Blogging.Repository.Persistence.BlogDbContext)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="29" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="29" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Posts.BlogPostRepository/&lt;&gt;c" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="0" branch-rate="1" complexity="2">
+          <methods>
+            <method name="&lt;GetByIdAsync&gt;b__4_0" signature="(Blogging.Domain.Entities.Comment)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="62" hits="0" branch="False" />
+              </lines>
+            </method>
+            <method name="&lt;GetByIdAsync&gt;b__4_1" signature="(Blogging.Domain.Entities.Comment)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="63" hits="0" branch="False" />
+                <line number="64" hits="0" branch="False" />
+                <line number="65" hits="0" branch="False" />
+                <line number="66" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="62" hits="0" branch="False" />
+            <line number="63" hits="0" branch="False" />
+            <line number="64" hits="0" branch="False" />
+            <line number="65" hits="0" branch="False" />
+            <line number="66" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Posts.BlogPostRepository/&lt;CreateAsync&gt;d__3" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="35" hits="9" branch="False" />
+                <line number="36" hits="9" branch="False" />
+                <line number="37" hits="9" branch="False" />
+                <line number="38" hits="9" branch="False" />
+                <line number="40" hits="9" branch="False" />
+                <line number="41" hits="9" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="35" hits="9" branch="False" />
+            <line number="36" hits="9" branch="False" />
+            <line number="37" hits="9" branch="False" />
+            <line number="38" hits="9" branch="False" />
+            <line number="40" hits="9" branch="False" />
+            <line number="41" hits="9" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Posts.BlogPostRepository/&lt;CreateCommentAsync&gt;d__5" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="75" hits="3" branch="False" />
+                <line number="76" hits="3" branch="False" />
+                <line number="77" hits="3" branch="False" />
+                <line number="78" hits="3" branch="False" />
+                <line number="79" hits="3" branch="False" />
+                <line number="81" hits="3" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="318" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="82" hits="1" branch="False" />
+                <line number="83" hits="1" branch="False" />
+                <line number="86" hits="2" branch="False" />
+                <line number="87" hits="2" branch="False" />
+                <line number="88" hits="2" branch="False" />
+                <line number="90" hits="2" branch="False" />
+                <line number="91" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="75" hits="3" branch="False" />
+            <line number="76" hits="3" branch="False" />
+            <line number="77" hits="3" branch="False" />
+            <line number="78" hits="3" branch="False" />
+            <line number="79" hits="3" branch="False" />
+            <line number="81" hits="3" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="318" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="82" hits="1" branch="False" />
+            <line number="83" hits="1" branch="False" />
+            <line number="86" hits="2" branch="False" />
+            <line number="87" hits="2" branch="False" />
+            <line number="88" hits="2" branch="False" />
+            <line number="90" hits="2" branch="False" />
+            <line number="91" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Posts.BlogPostRepository/&lt;GetByIdAsync&gt;d__4" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="47" hits="2" branch="False" />
+                <line number="48" hits="2" branch="False" />
+                <line number="49" hits="2" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="2" branch="False" />
+                <line number="53" hits="2" branch="False" />
+                <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="259" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="56" hits="2" branch="False" />
+                <line number="57" hits="2" branch="False" />
+                <line number="58" hits="2" branch="False" />
+                <line number="59" hits="2" branch="False" />
+                <line number="60" hits="2" branch="False" />
+                <line number="61" hits="2" branch="False" />
+                <line number="67" hits="2" branch="False" />
+                <line number="68" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="47" hits="2" branch="False" />
+            <line number="48" hits="2" branch="False" />
+            <line number="49" hits="2" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="2" branch="False" />
+            <line number="53" hits="2" branch="False" />
+            <line number="55" hits="2" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="259" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="56" hits="2" branch="False" />
+            <line number="57" hits="2" branch="False" />
+            <line number="58" hits="2" branch="False" />
+            <line number="59" hits="2" branch="False" />
+            <line number="60" hits="2" branch="False" />
+            <line number="61" hits="2" branch="False" />
+            <line number="67" hits="2" branch="False" />
+            <line number="68" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Posts.BlogPostRepository/&lt;ListAsync&gt;d__2" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="3" branch="False" />
+                <line number="19" hits="3" branch="False" />
+                <line number="20" hits="3" branch="False" />
+                <line number="21" hits="3" branch="False" />
+                <line number="22" hits="3" branch="False" />
+                <line number="23" hits="3" branch="False" />
+                <line number="24" hits="3" branch="False" />
+                <line number="25" hits="3" branch="False" />
+                <line number="26" hits="3" branch="False" />
+                <line number="27" hits="3" branch="False" />
+                <line number="28" hits="3" branch="False" />
+                <line number="29" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="3" branch="False" />
+            <line number="19" hits="3" branch="False" />
+            <line number="20" hits="3" branch="False" />
+            <line number="21" hits="3" branch="False" />
+            <line number="22" hits="3" branch="False" />
+            <line number="23" hits="3" branch="False" />
+            <line number="24" hits="3" branch="False" />
+            <line number="25" hits="3" branch="False" />
+            <line number="26" hits="3" branch="False" />
+            <line number="27" hits="3" branch="False" />
+            <line number="28" hits="3" branch="False" />
+            <line number="29" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Posts.BlogPostRepository/&lt;SearchAsync&gt;d__6" filename="Blogging.Repository/Posts/BlogPostRepository.cs" line-rate="1" branch-rate="0.8" complexity="10">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="0.8" complexity="10">
+              <lines>
+                <line number="97" hits="3" branch="False" />
+                <line number="98" hits="3" branch="False" />
+                <line number="100" hits="3" branch="False" />
+                <line number="101" hits="3" branch="False" />
+                <line number="102" hits="3" branch="False" />
+                <line number="103" hits="3" branch="False" />
+                <line number="104" hits="3" branch="False" />
+                <line number="106" hits="17" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="429" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="107" hits="4" branch="False" />
+                <line number="108" hits="4" branch="True" condition-coverage="83.33% (5/6)">
+                  <conditions>
+                    <condition number="283" type="jump" coverage="100%" />
+                    <condition number="296" type="jump" coverage="50%" />
+                    <condition number="357" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="109" hits="4" branch="False" />
+                <line number="110" hits="4" branch="False" />
+                <line number="111" hits="4" branch="False" />
+                <line number="112" hits="4" branch="False" />
+                <line number="113" hits="4" branch="False" />
+                <line number="114" hits="4" branch="False" />
+                <line number="115" hits="4" branch="False" />
+                <line number="117" hits="3" branch="True" condition-coverage="50% (1/2)">
+                  <conditions>
+                    <condition number="476" type="jump" coverage="50%" />
+                  </conditions>
+                </line>
+                <line number="118" hits="3" branch="False" />
+                <line number="119" hits="3" branch="False" />
+                <line number="120" hits="3" branch="False" />
+                <line number="121" hits="3" branch="False" />
+                <line number="122" hits="3" branch="False" />
+                <line number="123" hits="3" branch="False" />
+                <line number="124" hits="3" branch="False" />
+                <line number="125" hits="3" branch="False" />
+                <line number="126" hits="3" branch="False" />
+                <line number="128" hits="3" branch="False" />
+                <line number="129" hits="3" branch="False" />
+                <line number="130" hits="3" branch="False" />
+                <line number="131" hits="3" branch="False" />
+                <line number="132" hits="3" branch="False" />
+                <line number="133" hits="3" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="97" hits="3" branch="False" />
+            <line number="98" hits="3" branch="False" />
+            <line number="100" hits="3" branch="False" />
+            <line number="101" hits="3" branch="False" />
+            <line number="102" hits="3" branch="False" />
+            <line number="103" hits="3" branch="False" />
+            <line number="104" hits="3" branch="False" />
+            <line number="106" hits="17" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="429" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="107" hits="4" branch="False" />
+            <line number="108" hits="4" branch="True" condition-coverage="83.33% (5/6)">
+              <conditions>
+                <condition number="283" type="jump" coverage="100%" />
+                <condition number="296" type="jump" coverage="50%" />
+                <condition number="357" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="109" hits="4" branch="False" />
+            <line number="110" hits="4" branch="False" />
+            <line number="111" hits="4" branch="False" />
+            <line number="112" hits="4" branch="False" />
+            <line number="113" hits="4" branch="False" />
+            <line number="114" hits="4" branch="False" />
+            <line number="115" hits="4" branch="False" />
+            <line number="117" hits="3" branch="True" condition-coverage="50% (1/2)">
+              <conditions>
+                <condition number="476" type="jump" coverage="50%" />
+              </conditions>
+            </line>
+            <line number="118" hits="3" branch="False" />
+            <line number="119" hits="3" branch="False" />
+            <line number="120" hits="3" branch="False" />
+            <line number="121" hits="3" branch="False" />
+            <line number="122" hits="3" branch="False" />
+            <line number="123" hits="3" branch="False" />
+            <line number="124" hits="3" branch="False" />
+            <line number="125" hits="3" branch="False" />
+            <line number="126" hits="3" branch="False" />
+            <line number="128" hits="3" branch="False" />
+            <line number="129" hits="3" branch="False" />
+            <line number="130" hits="3" branch="False" />
+            <line number="131" hits="3" branch="False" />
+            <line number="132" hits="3" branch="False" />
+            <line number="133" hits="3" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Persistence.BlogDbContext" filename="Blogging.Repository/Persistence/BlogDbContext.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="OnModelCreating" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="2" branch="False" />
+                <line number="12" hits="2" branch="False" />
+                <line number="13" hits="2" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(Microsoft.EntityFrameworkCore.DbContextOptions`1&lt;Blogging.Repository.Persistence.BlogDbContext&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="63" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="2" branch="False" />
+            <line number="12" hits="2" branch="False" />
+            <line number="13" hits="2" branch="False" />
+            <line number="8" hits="63" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Persistence.BlogDbContext" filename="Blogging.Repository/Persistence/BlogDbContext.DbSets.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="get_BlogPosts" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="22" branch="False" />
+              </lines>
+            </method>
+            <method name="get_Comments" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="16" hits="5" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="22" branch="False" />
+            <line number="16" hits="5" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Persistence.BlogDbContextFactory" filename="Blogging.Repository/Persistence/BlogDbContextFactory.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="CreateDbContext" signature="(System.String[])" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="14" hits="1" branch="False" />
+                <line number="15" hits="1" branch="False" />
+                <line number="16" hits="1" branch="False" />
+                <line number="17" hits="1" branch="False" />
+                <line number="19" hits="1" branch="False" />
+                <line number="20" hits="1" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="14" hits="1" branch="False" />
+            <line number="15" hits="1" branch="False" />
+            <line number="16" hits="1" branch="False" />
+            <line number="17" hits="1" branch="False" />
+            <line number="19" hits="1" branch="False" />
+            <line number="20" hits="1" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Persistence.Migrations.InitialCreate" filename="Blogging.Repository/Persistence/Migrations/20260719185001_InitialCreate.cs" line-rate="0.8636" branch-rate="1" complexity="2">
+          <methods>
+            <method name="Up" signature="(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="12" hits="29" branch="False" />
+                <line number="13" hits="29" branch="False" />
+                <line number="14" hits="29" branch="False" />
+                <line number="15" hits="29" branch="False" />
+                <line number="16" hits="29" branch="False" />
+                <line number="17" hits="29" branch="False" />
+                <line number="18" hits="29" branch="False" />
+                <line number="19" hits="29" branch="False" />
+                <line number="20" hits="29" branch="False" />
+                <line number="21" hits="29" branch="False" />
+                <line number="22" hits="29" branch="False" />
+                <line number="23" hits="29" branch="False" />
+                <line number="24" hits="29" branch="False" />
+                <line number="25" hits="58" branch="False" />
+                <line number="27" hits="29" branch="False" />
+                <line number="28" hits="29" branch="False" />
+                <line number="29" hits="29" branch="False" />
+                <line number="30" hits="29" branch="False" />
+                <line number="31" hits="29" branch="False" />
+                <line number="32" hits="29" branch="False" />
+                <line number="33" hits="29" branch="False" />
+                <line number="34" hits="29" branch="False" />
+                <line number="35" hits="29" branch="False" />
+                <line number="36" hits="29" branch="False" />
+                <line number="37" hits="29" branch="False" />
+                <line number="38" hits="29" branch="False" />
+                <line number="39" hits="29" branch="False" />
+                <line number="40" hits="29" branch="False" />
+                <line number="41" hits="29" branch="False" />
+                <line number="42" hits="29" branch="False" />
+                <line number="43" hits="29" branch="False" />
+                <line number="44" hits="29" branch="False" />
+                <line number="45" hits="58" branch="False" />
+                <line number="47" hits="29" branch="False" />
+                <line number="48" hits="29" branch="False" />
+                <line number="49" hits="29" branch="False" />
+                <line number="50" hits="29" branch="False" />
+                <line number="51" hits="29" branch="False" />
+              </lines>
+            </method>
+            <method name="Down" signature="(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)" line-rate="0" branch-rate="1" complexity="1">
+              <lines>
+                <line number="55" hits="0" branch="False" />
+                <line number="56" hits="0" branch="False" />
+                <line number="57" hits="0" branch="False" />
+                <line number="59" hits="0" branch="False" />
+                <line number="60" hits="0" branch="False" />
+                <line number="61" hits="0" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="12" hits="29" branch="False" />
+            <line number="13" hits="29" branch="False" />
+            <line number="14" hits="29" branch="False" />
+            <line number="15" hits="29" branch="False" />
+            <line number="16" hits="29" branch="False" />
+            <line number="17" hits="29" branch="False" />
+            <line number="18" hits="29" branch="False" />
+            <line number="19" hits="29" branch="False" />
+            <line number="20" hits="29" branch="False" />
+            <line number="21" hits="29" branch="False" />
+            <line number="22" hits="29" branch="False" />
+            <line number="23" hits="29" branch="False" />
+            <line number="24" hits="29" branch="False" />
+            <line number="25" hits="58" branch="False" />
+            <line number="27" hits="29" branch="False" />
+            <line number="28" hits="29" branch="False" />
+            <line number="29" hits="29" branch="False" />
+            <line number="30" hits="29" branch="False" />
+            <line number="31" hits="29" branch="False" />
+            <line number="32" hits="29" branch="False" />
+            <line number="33" hits="29" branch="False" />
+            <line number="34" hits="29" branch="False" />
+            <line number="35" hits="29" branch="False" />
+            <line number="36" hits="29" branch="False" />
+            <line number="37" hits="29" branch="False" />
+            <line number="38" hits="29" branch="False" />
+            <line number="39" hits="29" branch="False" />
+            <line number="40" hits="29" branch="False" />
+            <line number="41" hits="29" branch="False" />
+            <line number="42" hits="29" branch="False" />
+            <line number="43" hits="29" branch="False" />
+            <line number="44" hits="29" branch="False" />
+            <line number="45" hits="58" branch="False" />
+            <line number="47" hits="29" branch="False" />
+            <line number="48" hits="29" branch="False" />
+            <line number="49" hits="29" branch="False" />
+            <line number="50" hits="29" branch="False" />
+            <line number="51" hits="29" branch="False" />
+            <line number="55" hits="0" branch="False" />
+            <line number="56" hits="0" branch="False" />
+            <line number="57" hits="0" branch="False" />
+            <line number="59" hits="0" branch="False" />
+            <line number="60" hits="0" branch="False" />
+            <line number="61" hits="0" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Persistence.Migrations.InitialCreate" filename="Blogging.Repository/Persistence/Migrations/20260719185001_InitialCreate.Designer.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="BuildTargetModel" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="18" hits="29" branch="False" />
+                <line number="20" hits="29" branch="False" />
+                <line number="22" hits="29" branch="False" />
+                <line number="23" hits="29" branch="False" />
+                <line number="24" hits="29" branch="False" />
+                <line number="25" hits="29" branch="False" />
+                <line number="26" hits="29" branch="False" />
+                <line number="27" hits="29" branch="False" />
+                <line number="28" hits="29" branch="False" />
+                <line number="29" hits="29" branch="False" />
+                <line number="30" hits="29" branch="False" />
+                <line number="31" hits="29" branch="False" />
+                <line number="32" hits="29" branch="False" />
+                <line number="33" hits="29" branch="False" />
+                <line number="34" hits="29" branch="False" />
+                <line number="35" hits="29" branch="False" />
+                <line number="36" hits="29" branch="False" />
+                <line number="37" hits="29" branch="False" />
+                <line number="38" hits="29" branch="False" />
+                <line number="39" hits="29" branch="False" />
+                <line number="40" hits="29" branch="False" />
+                <line number="41" hits="58" branch="False" />
+                <line number="43" hits="29" branch="False" />
+                <line number="44" hits="29" branch="False" />
+                <line number="45" hits="29" branch="False" />
+                <line number="46" hits="29" branch="False" />
+                <line number="47" hits="29" branch="False" />
+                <line number="48" hits="29" branch="False" />
+                <line number="49" hits="29" branch="False" />
+                <line number="50" hits="29" branch="False" />
+                <line number="51" hits="29" branch="False" />
+                <line number="52" hits="29" branch="False" />
+                <line number="53" hits="29" branch="False" />
+                <line number="54" hits="29" branch="False" />
+                <line number="55" hits="29" branch="False" />
+                <line number="56" hits="29" branch="False" />
+                <line number="57" hits="29" branch="False" />
+                <line number="58" hits="29" branch="False" />
+                <line number="59" hits="29" branch="False" />
+                <line number="60" hits="29" branch="False" />
+                <line number="61" hits="29" branch="False" />
+                <line number="62" hits="58" branch="False" />
+                <line number="64" hits="29" branch="False" />
+                <line number="65" hits="29" branch="False" />
+                <line number="66" hits="29" branch="False" />
+                <line number="67" hits="29" branch="False" />
+                <line number="68" hits="29" branch="False" />
+                <line number="69" hits="29" branch="False" />
+                <line number="70" hits="29" branch="False" />
+                <line number="71" hits="29" branch="False" />
+                <line number="72" hits="29" branch="False" />
+                <line number="73" hits="58" branch="False" />
+                <line number="75" hits="29" branch="False" />
+                <line number="76" hits="29" branch="False" />
+                <line number="77" hits="29" branch="False" />
+                <line number="78" hits="58" branch="False" />
+                <line number="80" hits="29" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="18" hits="29" branch="False" />
+            <line number="20" hits="29" branch="False" />
+            <line number="22" hits="29" branch="False" />
+            <line number="23" hits="29" branch="False" />
+            <line number="24" hits="29" branch="False" />
+            <line number="25" hits="29" branch="False" />
+            <line number="26" hits="29" branch="False" />
+            <line number="27" hits="29" branch="False" />
+            <line number="28" hits="29" branch="False" />
+            <line number="29" hits="29" branch="False" />
+            <line number="30" hits="29" branch="False" />
+            <line number="31" hits="29" branch="False" />
+            <line number="32" hits="29" branch="False" />
+            <line number="33" hits="29" branch="False" />
+            <line number="34" hits="29" branch="False" />
+            <line number="35" hits="29" branch="False" />
+            <line number="36" hits="29" branch="False" />
+            <line number="37" hits="29" branch="False" />
+            <line number="38" hits="29" branch="False" />
+            <line number="39" hits="29" branch="False" />
+            <line number="40" hits="29" branch="False" />
+            <line number="41" hits="58" branch="False" />
+            <line number="43" hits="29" branch="False" />
+            <line number="44" hits="29" branch="False" />
+            <line number="45" hits="29" branch="False" />
+            <line number="46" hits="29" branch="False" />
+            <line number="47" hits="29" branch="False" />
+            <line number="48" hits="29" branch="False" />
+            <line number="49" hits="29" branch="False" />
+            <line number="50" hits="29" branch="False" />
+            <line number="51" hits="29" branch="False" />
+            <line number="52" hits="29" branch="False" />
+            <line number="53" hits="29" branch="False" />
+            <line number="54" hits="29" branch="False" />
+            <line number="55" hits="29" branch="False" />
+            <line number="56" hits="29" branch="False" />
+            <line number="57" hits="29" branch="False" />
+            <line number="58" hits="29" branch="False" />
+            <line number="59" hits="29" branch="False" />
+            <line number="60" hits="29" branch="False" />
+            <line number="61" hits="29" branch="False" />
+            <line number="62" hits="58" branch="False" />
+            <line number="64" hits="29" branch="False" />
+            <line number="65" hits="29" branch="False" />
+            <line number="66" hits="29" branch="False" />
+            <line number="67" hits="29" branch="False" />
+            <line number="68" hits="29" branch="False" />
+            <line number="69" hits="29" branch="False" />
+            <line number="70" hits="29" branch="False" />
+            <line number="71" hits="29" branch="False" />
+            <line number="72" hits="29" branch="False" />
+            <line number="73" hits="58" branch="False" />
+            <line number="75" hits="29" branch="False" />
+            <line number="76" hits="29" branch="False" />
+            <line number="77" hits="29" branch="False" />
+            <line number="78" hits="58" branch="False" />
+            <line number="80" hits="29" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Persistence.Migrations.BlogDbContextModelSnapshot" filename="Blogging.Repository/Persistence/Migrations/BlogDbContextModelSnapshot.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="BuildModel" signature="(Microsoft.EntityFrameworkCore.ModelBuilder)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="15" hits="29" branch="False" />
+                <line number="17" hits="29" branch="False" />
+                <line number="19" hits="29" branch="False" />
+                <line number="20" hits="29" branch="False" />
+                <line number="21" hits="29" branch="False" />
+                <line number="22" hits="29" branch="False" />
+                <line number="23" hits="29" branch="False" />
+                <line number="24" hits="29" branch="False" />
+                <line number="25" hits="29" branch="False" />
+                <line number="26" hits="29" branch="False" />
+                <line number="27" hits="29" branch="False" />
+                <line number="28" hits="29" branch="False" />
+                <line number="29" hits="29" branch="False" />
+                <line number="30" hits="29" branch="False" />
+                <line number="31" hits="29" branch="False" />
+                <line number="32" hits="29" branch="False" />
+                <line number="33" hits="29" branch="False" />
+                <line number="34" hits="29" branch="False" />
+                <line number="35" hits="29" branch="False" />
+                <line number="36" hits="29" branch="False" />
+                <line number="37" hits="29" branch="False" />
+                <line number="38" hits="58" branch="False" />
+                <line number="40" hits="29" branch="False" />
+                <line number="41" hits="29" branch="False" />
+                <line number="42" hits="29" branch="False" />
+                <line number="43" hits="29" branch="False" />
+                <line number="44" hits="29" branch="False" />
+                <line number="45" hits="29" branch="False" />
+                <line number="46" hits="29" branch="False" />
+                <line number="47" hits="29" branch="False" />
+                <line number="48" hits="29" branch="False" />
+                <line number="49" hits="29" branch="False" />
+                <line number="50" hits="29" branch="False" />
+                <line number="51" hits="29" branch="False" />
+                <line number="52" hits="29" branch="False" />
+                <line number="53" hits="29" branch="False" />
+                <line number="54" hits="29" branch="False" />
+                <line number="55" hits="29" branch="False" />
+                <line number="56" hits="29" branch="False" />
+                <line number="57" hits="29" branch="False" />
+                <line number="58" hits="29" branch="False" />
+                <line number="59" hits="58" branch="False" />
+                <line number="61" hits="29" branch="False" />
+                <line number="62" hits="29" branch="False" />
+                <line number="63" hits="29" branch="False" />
+                <line number="64" hits="29" branch="False" />
+                <line number="65" hits="29" branch="False" />
+                <line number="66" hits="29" branch="False" />
+                <line number="67" hits="29" branch="False" />
+                <line number="68" hits="29" branch="False" />
+                <line number="69" hits="29" branch="False" />
+                <line number="70" hits="58" branch="False" />
+                <line number="72" hits="29" branch="False" />
+                <line number="73" hits="29" branch="False" />
+                <line number="74" hits="29" branch="False" />
+                <line number="75" hits="58" branch="False" />
+                <line number="77" hits="29" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="15" hits="29" branch="False" />
+            <line number="17" hits="29" branch="False" />
+            <line number="19" hits="29" branch="False" />
+            <line number="20" hits="29" branch="False" />
+            <line number="21" hits="29" branch="False" />
+            <line number="22" hits="29" branch="False" />
+            <line number="23" hits="29" branch="False" />
+            <line number="24" hits="29" branch="False" />
+            <line number="25" hits="29" branch="False" />
+            <line number="26" hits="29" branch="False" />
+            <line number="27" hits="29" branch="False" />
+            <line number="28" hits="29" branch="False" />
+            <line number="29" hits="29" branch="False" />
+            <line number="30" hits="29" branch="False" />
+            <line number="31" hits="29" branch="False" />
+            <line number="32" hits="29" branch="False" />
+            <line number="33" hits="29" branch="False" />
+            <line number="34" hits="29" branch="False" />
+            <line number="35" hits="29" branch="False" />
+            <line number="36" hits="29" branch="False" />
+            <line number="37" hits="29" branch="False" />
+            <line number="38" hits="58" branch="False" />
+            <line number="40" hits="29" branch="False" />
+            <line number="41" hits="29" branch="False" />
+            <line number="42" hits="29" branch="False" />
+            <line number="43" hits="29" branch="False" />
+            <line number="44" hits="29" branch="False" />
+            <line number="45" hits="29" branch="False" />
+            <line number="46" hits="29" branch="False" />
+            <line number="47" hits="29" branch="False" />
+            <line number="48" hits="29" branch="False" />
+            <line number="49" hits="29" branch="False" />
+            <line number="50" hits="29" branch="False" />
+            <line number="51" hits="29" branch="False" />
+            <line number="52" hits="29" branch="False" />
+            <line number="53" hits="29" branch="False" />
+            <line number="54" hits="29" branch="False" />
+            <line number="55" hits="29" branch="False" />
+            <line number="56" hits="29" branch="False" />
+            <line number="57" hits="29" branch="False" />
+            <line number="58" hits="29" branch="False" />
+            <line number="59" hits="58" branch="False" />
+            <line number="61" hits="29" branch="False" />
+            <line number="62" hits="29" branch="False" />
+            <line number="63" hits="29" branch="False" />
+            <line number="64" hits="29" branch="False" />
+            <line number="65" hits="29" branch="False" />
+            <line number="66" hits="29" branch="False" />
+            <line number="67" hits="29" branch="False" />
+            <line number="68" hits="29" branch="False" />
+            <line number="69" hits="29" branch="False" />
+            <line number="70" hits="58" branch="False" />
+            <line number="72" hits="29" branch="False" />
+            <line number="73" hits="29" branch="False" />
+            <line number="74" hits="29" branch="False" />
+            <line number="75" hits="58" branch="False" />
+            <line number="77" hits="29" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Options.BlogDatabaseOptions" filename="Blogging.Repository/Options/BlogDatabaseOptions.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="get_ConnectionString" signature="()" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="13" hits="218" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="13" hits="218" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.DependencyInjection.AddBloggingRepositoryExtension" filename="Blogging.Repository/DependencyInjection/ServiceCollectionExtensions/AddBloggingRepositoryExtension.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="AddBloggingRepository" signature="(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="26" hits="28" branch="False" />
+                <line number="27" hits="28" branch="False" />
+                <line number="28" hits="28" branch="False" />
+                <line number="30" hits="28" branch="False" />
+                <line number="31" hits="28" branch="False" />
+                <line number="32" hits="28" branch="False" />
+                <line number="33" hits="53" branch="False" />
+                <line number="34" hits="28" branch="False" />
+                <line number="35" hits="28" branch="False" />
+                <line number="37" hits="28" branch="False" />
+                <line number="38" hits="59" branch="False" />
+                <line number="39" hits="59" branch="False" />
+                <line number="40" hits="59" branch="False" />
+                <line number="41" hits="59" branch="False" />
+                <line number="42" hits="28" branch="False" />
+                <line number="43" hits="59" branch="False" />
+                <line number="44" hits="87" branch="False" />
+                <line number="46" hits="28" branch="False" />
+                <line number="48" hits="28" branch="False" />
+                <line number="49" hits="28" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="26" hits="28" branch="False" />
+            <line number="27" hits="28" branch="False" />
+            <line number="28" hits="28" branch="False" />
+            <line number="30" hits="28" branch="False" />
+            <line number="31" hits="28" branch="False" />
+            <line number="32" hits="28" branch="False" />
+            <line number="33" hits="53" branch="False" />
+            <line number="34" hits="28" branch="False" />
+            <line number="35" hits="28" branch="False" />
+            <line number="37" hits="28" branch="False" />
+            <line number="38" hits="59" branch="False" />
+            <line number="39" hits="59" branch="False" />
+            <line number="40" hits="59" branch="False" />
+            <line number="41" hits="59" branch="False" />
+            <line number="42" hits="28" branch="False" />
+            <line number="43" hits="59" branch="False" />
+            <line number="44" hits="87" branch="False" />
+            <line number="46" hits="28" branch="False" />
+            <line number="48" hits="28" branch="False" />
+            <line number="49" hits="28" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.DependencyInjection.UseBloggingDatabaseAsyncExtension/&lt;UseBloggingDatabaseAsync&gt;d__0" filename="Blogging.Repository/DependencyInjection/ServiceProviderExtensions/UseBloggingDatabaseAsyncExtension.cs" line-rate="1" branch-rate="1" complexity="2">
+          <methods>
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="21" hits="28" branch="False" />
+                <line number="22" hits="28" branch="False" />
+                <line number="24" hits="28" branch="False" />
+                <line number="25" hits="28" branch="False" />
+                <line number="26" hits="28" branch="False" />
+                <line number="27" hits="28" branch="False" />
+                <line number="28" hits="28" branch="False" />
+                <line number="30" hits="28" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="254" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="31" hits="1" branch="False" />
+                <line number="32" hits="1" branch="False" />
+                <line number="35" hits="27" branch="False" />
+                <line number="36" hits="28" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="21" hits="28" branch="False" />
+            <line number="22" hits="28" branch="False" />
+            <line number="24" hits="28" branch="False" />
+            <line number="25" hits="28" branch="False" />
+            <line number="26" hits="28" branch="False" />
+            <line number="27" hits="28" branch="False" />
+            <line number="28" hits="28" branch="False" />
+            <line number="30" hits="28" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="254" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="31" hits="1" branch="False" />
+            <line number="32" hits="1" branch="False" />
+            <line number="35" hits="27" branch="False" />
+            <line number="36" hits="28" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Configuration.BlogPostEntityConfigurator" filename="Blogging.Repository/Configuration/BlogPostEntityConfigurator.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Configure" signature="(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1&lt;Blogging.Domain.Entities.BlogPost&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="2" branch="False" />
+                <line number="12" hits="2" branch="False" />
+                <line number="13" hits="2" branch="False" />
+                <line number="14" hits="2" branch="False" />
+                <line number="15" hits="2" branch="False" />
+                <line number="16" hits="2" branch="False" />
+                <line number="17" hits="2" branch="False" />
+                <line number="18" hits="2" branch="False" />
+                <line number="19" hits="2" branch="False" />
+                <line number="20" hits="2" branch="False" />
+                <line number="21" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="2" branch="False" />
+            <line number="12" hits="2" branch="False" />
+            <line number="13" hits="2" branch="False" />
+            <line number="14" hits="2" branch="False" />
+            <line number="15" hits="2" branch="False" />
+            <line number="16" hits="2" branch="False" />
+            <line number="17" hits="2" branch="False" />
+            <line number="18" hits="2" branch="False" />
+            <line number="19" hits="2" branch="False" />
+            <line number="20" hits="2" branch="False" />
+            <line number="21" hits="2" branch="False" />
+          </lines>
+        </class>
+        <class name="Blogging.Repository.Configuration.CommentEntityConfigurator" filename="Blogging.Repository/Configuration/CommentEntityConfigurator.cs" line-rate="1" branch-rate="1" complexity="1">
+          <methods>
+            <method name="Configure" signature="(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder`1&lt;Blogging.Domain.Entities.Comment&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="11" hits="2" branch="False" />
+                <line number="12" hits="2" branch="False" />
+                <line number="13" hits="2" branch="False" />
+                <line number="14" hits="2" branch="False" />
+                <line number="15" hits="2" branch="False" />
+                <line number="16" hits="2" branch="False" />
+                <line number="17" hits="2" branch="False" />
+                <line number="18" hits="2" branch="False" />
+                <line number="19" hits="2" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="11" hits="2" branch="False" />
+            <line number="12" hits="2" branch="False" />
+            <line number="13" hits="2" branch="False" />
+            <line number="14" hits="2" branch="False" />
+            <line number="15" hits="2" branch="False" />
+            <line number="16" hits="2" branch="False" />
+            <line number="17" hits="2" branch="False" />
+            <line number="18" hits="2" branch="False" />
+            <line number="19" hits="2" branch="False" />
+          </lines>
+        </class>
+      </classes>
+    </package>
+  </packages>
+</coverage>
