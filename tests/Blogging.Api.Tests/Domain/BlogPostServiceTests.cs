@@ -61,4 +61,63 @@ public sealed class BlogPostServiceTests
             () => service.CreateAsync(command, CancellationToken.None));
         repository.VerifyNoOtherCalls();
     }
+
+    /// <summary>
+    /// Confirms that detail retrieval delegates to the post repository.
+    /// </summary>
+    [TestMethod]
+    public async Task GetByIdAsyncReturnsRepositoryResultAsync()
+    {
+        var expected = new BlogPostDetail(
+            1,
+            "A title",
+            "Content",
+            Array.Empty<CommentSummary>());
+        var repository = new Mock<IBlogPostRepository>();
+        repository.Setup(item => item.GetByIdAsync(1, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(expected);
+        var service = new BlogPostService(repository.Object);
+
+        var result = await service.GetByIdAsync(1, CancellationToken.None)
+            .ConfigureAwait(false);
+
+        Assert.AreEqual(expected, result);
+    }
+
+    /// <summary>
+    /// Confirms that valid comment values are delegated to persistence.
+    /// </summary>
+    [TestMethod]
+    public async Task CreateCommentAsyncDelegatesValidValuesAsync()
+    {
+        var command = new CreateCommentCommand { Content = "A comment" };
+        var expected = new CommentSummary(1, 2, command.Content);
+        var repository = new Mock<IBlogPostRepository>();
+        repository.Setup(item => item.CreateCommentAsync(
+                2,
+                command,
+                It.IsAny<CancellationToken>()))
+            .ReturnsAsync(expected);
+        var service = new BlogPostService(repository.Object);
+
+        var result = await service.CreateCommentAsync(2, command, CancellationToken.None)
+            .ConfigureAwait(false);
+
+        Assert.AreEqual(expected, result);
+    }
+
+    /// <summary>
+    /// Confirms that invalid comment post identifiers are rejected.
+    /// </summary>
+    [TestMethod]
+    public void CreateCommentAsyncRejectsInvalidPostIdentifier()
+    {
+        var repository = new Mock<IBlogPostRepository>();
+        var service = new BlogPostService(repository.Object);
+        var command = new CreateCommentCommand { Content = "A comment" };
+
+        Assert.ThrowsExactly<ArgumentOutOfRangeException>(
+            () => service.CreateCommentAsync(0, command, CancellationToken.None));
+        repository.VerifyNoOtherCalls();
+    }
 }
