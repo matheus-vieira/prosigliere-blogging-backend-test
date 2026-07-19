@@ -41,8 +41,8 @@ builder.AddBloggingDomain();
 The call is a façade for layer registration. It invokes Domain registration, and
 Domain invokes a Repository registration callback. `Program.cs` must not call
 `AddBloggingRepository`, configure `DbContext`, or manipulate migration details.
-Application startup uses `UseBloggingAsync`, which delegates database initialization
-to Repository code.
+Application startup uses one `UseBloggingApiAsync` call, which delegates database
+initialization to `UseBloggingAsync` and maps all feature endpoints internally.
 
 The intended flow is:
 
@@ -51,8 +51,10 @@ Program.cs
   -> API.AddBloggingDomain()
       -> Domain.AddBloggingDomain()
           -> Repository registration callback
-  -> API.UseBloggingAsync()
-      -> Repository.UseBloggingDatabaseAsync()
+  -> API.UseBloggingApiAsync()
+      -> API.UseBloggingAsync()
+          -> Repository.UseBloggingDatabaseAsync()
+      -> API.MapBloggingEndpoints()
 ```
 
 The callback avoids a project-reference cycle while keeping the composition flow

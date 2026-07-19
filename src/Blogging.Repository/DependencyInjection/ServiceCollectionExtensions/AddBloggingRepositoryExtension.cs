@@ -1,5 +1,7 @@
+using Blogging.Domain.Posts;
 using Blogging.Repository.Options;
 using Blogging.Repository.Persistence;
+using Blogging.Repository.Posts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,6 +42,8 @@ public static class AddBloggingRepositoryExtension
 
             options.UseSqlite(databaseOptions.ConnectionString);
         });
+
+        services.AddScoped<IBlogPostRepository, BlogPostRepository>();
 
         return services;
     }

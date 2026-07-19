@@ -52,13 +52,15 @@ public sealed class DependencyInjectionTests
     /// Confirms that API diagnostics can be registered and composed.
     /// </summary>
     [TestMethod]
-    public void AddBloggingApiRegistersDiagnostics()
+    public async Task AddBloggingApiRegistersDiagnosticsAsync()
     {
         var builder = WebApplication.CreateBuilder();
+        builder.Configuration["BlogDatabase:ConnectionString"] = "Data Source=:memory:";
+        builder.AddBloggingDomain();
         builder.AddBloggingApi();
         using var application = builder.Build();
 
-        application.UseBloggingApi();
+        await application.UseBloggingApiAsync().ConfigureAwait(false);
 
         Assert.IsNotNull(application);
     }
@@ -67,14 +69,16 @@ public sealed class DependencyInjectionTests
     /// Confirms that production composition omits the development Swagger UI.
     /// </summary>
     [TestMethod]
-    public void UseBloggingApiSupportsProductionEnvironment()
+    public async Task UseBloggingApiSupportsProductionEnvironmentAsync()
     {
         var builder = WebApplication.CreateBuilder(
             new WebApplicationOptions { EnvironmentName = "Production" });
+        builder.Configuration["BlogDatabase:ConnectionString"] = "Data Source=:memory:";
+        builder.AddBloggingDomain();
         builder.AddBloggingApi();
         using var application = builder.Build();
 
-        application.UseBloggingApi();
+        await application.UseBloggingApiAsync().ConfigureAwait(false);
 
         Assert.IsNotNull(application);
     }

@@ -43,6 +43,24 @@ public sealed class ApiDiagnosticsTests
     }
 
     /// <summary>
+    /// Confirms that Swagger UI references the HTTP OpenAPI endpoint.
+    /// </summary>
+    [TestMethod]
+    public async Task SwaggerUiReferencesOpenApiEndpointAsync()
+    {
+        using var factory = new BloggingApiFactory();
+        using var client = factory.CreateClient();
+
+        var response = await client
+            .GetAsync("/swagger/index.js")
+            .ConfigureAwait(false);
+        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+
+        Assert.IsTrue(response.IsSuccessStatusCode);
+        StringAssert.Contains(content, "/swagger/v1/swagger.json");
+    }
+
+    /// <summary>
     /// Confirms that unexpected exceptions produce a safe error response.
     /// </summary>
     [TestMethod]

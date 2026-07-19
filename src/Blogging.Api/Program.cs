@@ -1,14 +1,12 @@
 using Blogging.Api.DependencyInjection;
+using Blogging.Api.Endpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.AddBloggingDomain();
 builder.AddBloggingApi();
 
 var app = builder.Build();
-await app.UseBloggingAsync().ConfigureAwait(false);
-app.UseBloggingApi();
-
-app.MapGet("/", () => "Hello World!");
+await app.UseBloggingApiAsync().ConfigureAwait(false);
 
 app.Run();
 

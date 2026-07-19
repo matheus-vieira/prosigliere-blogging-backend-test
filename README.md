@@ -20,13 +20,16 @@ The functional HTTP endpoints will be implemented in subsequent branches.
 - Entity Framework Core 10 with the Microsoft SQLite provider.
 - API, Domain, and Repository layers composed through `AddBloggingDomain`.
 - Automatic local schema creation and pending migration application through
-  `UseBloggingAsync` and `UseBloggingDatabaseAsync`.
-- OpenAPI document and Development-only Swagger UI through Swashbuckle.
+  `UseBloggingApiAsync`.
+- OpenAPI document and Swagger UI through Swashbuckle.
 - NuGet Central Package Management through `Directory.Packages.props`.
 - `Directory.Build.props` for analyzers, nullable reference types, code style, and
   warnings as errors.
 - MSTest, Moq, Moq.AutoMock, Bogus, WebApplicationFactory, and Coverlet.
 - `BloggingBackend.slnx`, the modern solution format supported by the .NET SDK.
+
+`UseBloggingApiAsync` is the single API startup call and internally maps feature
+endpoints through `MapBloggingEndpoints`.
 
 ## Prerequisites
 
@@ -46,12 +49,17 @@ dotnet test BloggingBackend.slnx
 dotnet run --project src/Blogging.Api/Blogging.Api.csproj
 ```
 
-The API currently exposes the template root endpoint. On startup, the configured
-SQLite database checks for pending EF Core migrations and applies them when needed.
+On startup, the configured SQLite database checks for pending EF Core migrations and
+applies them when needed. The root path `/` redirects to `/swagger`.
 
-In Development, Swagger UI is available at `/swagger` and the OpenAPI document is
-available at `/swagger/v1/swagger.json`. The health endpoint is available at
-`/health` in every environment.
+Swagger UI is available at `/swagger` and the OpenAPI document is available at
+`/swagger/v1/swagger.json`. The health endpoint is available at `/health` in every
+environment.
+
+Always open Swagger through the running API, for example
+`http://localhost:5185/swagger`. Do not open `swagger/index.html` directly from the
+file system, because a `file://` page cannot execute the OpenAPI request as an HTTP
+or HTTPS CORS request.
 
 ## Quality Checks
 
