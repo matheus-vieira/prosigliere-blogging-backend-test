@@ -176,6 +176,9 @@ coverage*.json
 coverage*.xml
 coverage*.info
 coverage/
+!coverage/
+!coverage/latest/
+!coverage/latest/README.md
 TestResults/
 
 # Local SQLite databases
