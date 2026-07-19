@@ -8,6 +8,7 @@ namespace Blogging.Api.Tests;
 /// Verifies the POST comment endpoint behavior.
 /// </summary>
 [TestClass]
+[TestCategory("Api")]
 public sealed class CreateCommentEndpointTests
 {
     /// <summary>

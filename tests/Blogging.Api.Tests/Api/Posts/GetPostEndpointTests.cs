@@ -8,6 +8,7 @@ namespace Blogging.Api.Tests;
 /// Verifies the GET post detail endpoint behavior.
 /// </summary>
 [TestClass]
+[TestCategory("Api")]
 public sealed class GetPostEndpointTests
 {
     /// <summary>

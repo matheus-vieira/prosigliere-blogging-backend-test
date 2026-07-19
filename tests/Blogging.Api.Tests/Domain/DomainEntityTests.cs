@@ -6,6 +6,7 @@ namespace Blogging.Api.Tests;
 /// Verifies Domain entity invariants that do not require infrastructure.
 /// </summary>
 [TestClass]
+[TestCategory("Domain")]
 public sealed class DomainEntityTests
 {
     /// <summary>

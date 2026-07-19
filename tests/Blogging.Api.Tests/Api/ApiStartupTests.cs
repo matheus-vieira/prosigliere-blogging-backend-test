@@ -9,6 +9,7 @@ namespace Blogging.Api.Tests;
 /// Verifies API composition and startup database initialization.
 /// </summary>
 [TestClass]
+[TestCategory("Api")]
 public sealed class ApiStartupTests
 {
     /// <summary>

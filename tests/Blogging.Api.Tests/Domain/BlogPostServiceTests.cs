@@ -1,3 +1,4 @@
+using Blogging.Api.Tests.TestData;
 using Blogging.Domain.Posts;
 using Moq;
 
@@ -7,6 +8,7 @@ namespace Blogging.Api.Tests;
 /// Verifies the Domain use cases for blog posts.
 /// </summary>
 [TestClass]
+[TestCategory("Domain")]
 public sealed class BlogPostServiceTests
 {
     /// <summary>
@@ -32,7 +34,7 @@ public sealed class BlogPostServiceTests
     [TestMethod]
     public async Task CreateAsyncDelegatesValidValuesAsync()
     {
-        var command = new CreateBlogPostCommand { Title = "A title", Content = "Content" };
+        var command = BlogPostCommandFaker.Create().Generate();
         var expected = new BlogPostSummary(1, command.Title, 0);
         var repository = new Mock<IBlogPostRepository>();
         repository.Setup(item => item.CreateAsync(command, It.IsAny<CancellationToken>()))
@@ -90,7 +92,7 @@ public sealed class BlogPostServiceTests
     [TestMethod]
     public async Task CreateCommentAsyncDelegatesValidValuesAsync()
     {
-        var command = new CreateCommentCommand { Content = "A comment" };
+        var command = CommentCommandFaker.Create().Generate();
         var expected = new CommentSummary(1, 2, command.Content);
         var repository = new Mock<IBlogPostRepository>();
         repository.Setup(item => item.CreateCommentAsync(

@@ -9,6 +9,7 @@ namespace Blogging.Api.Tests;
 /// Verifies EF Core mappings, migrations, and SQLite relationship behavior.
 /// </summary>
 [TestClass]
+[TestCategory("Repository")]
 public sealed class PersistenceTests
 {
     /// <summary>

@@ -11,6 +11,7 @@ namespace Blogging.Api.Tests;
 /// Verifies the extension-method composition boundaries.
 /// </summary>
 [TestClass]
+[TestCategory("Api")]
 public sealed class DependencyInjectionTests
 {
     /// <summary>
