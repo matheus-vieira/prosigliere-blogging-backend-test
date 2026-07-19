@@ -21,4 +21,24 @@ public interface IBlogPostRepository
     Task<BlogPostSummary> CreateAsync(
         CreateBlogPostCommand command,
         CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Gets a post with its comments.
+    /// </summary>
+    /// <param name="postId">The post identifier.</param>
+    /// <param name="cancellationToken">Cancels the query.</param>
+    /// <returns>The detail or null when the post does not exist.</returns>
+    Task<BlogPostDetail?> GetByIdAsync(int postId, CancellationToken cancellationToken);
+
+    /// <summary>
+    /// Persists a comment for an existing post.
+    /// </summary>
+    /// <param name="postId">The post identifier.</param>
+    /// <param name="command">The comment values to persist.</param>
+    /// <param name="cancellationToken">Cancels the write.</param>
+    /// <returns>The created comment or null when the post does not exist.</returns>
+    Task<CommentSummary?> CreateCommentAsync(
+        int postId,
+        CreateCommentCommand command,
+        CancellationToken cancellationToken);
 }
