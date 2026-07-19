@@ -9,10 +9,9 @@ The original challenge statement is preserved in
 
 ## Current State
 
-The repository currently contains the API baseline and the first persistence slice.
-It includes the API, Domain, and Repository projects, shared build configuration,
-package management, EF Core mappings, SQLite migrations, and persistence tests.
-The functional HTTP endpoints will be implemented in subsequent branches.
+The repository contains the API, Domain, and Repository projects, shared build
+configuration, package management, EF Core mappings, SQLite migrations, functional
+Posts and Comments endpoints, and a layered automated test suite.
 
 ## Technology Stack
 
@@ -46,7 +45,7 @@ From the repository root:
 dotnet restore BloggingBackend.slnx
 dotnet build BloggingBackend.slnx --warnaserror
 dotnet test BloggingBackend.slnx
-dotnet run --project src/Blogging.Api/Blogging.Api.csproj
+dotnet run --launch-profile http --project src/Blogging.Api/Blogging.Api.csproj
 ```
 
 On startup, the configured SQLite database checks for pending EF Core migrations and
@@ -61,6 +60,10 @@ Always open Swagger through the running API, for example
 file system, because a `file://` page cannot execute the OpenAPI request as an HTTP
 or HTTPS CORS request.
 
+The development database is stored in `src/Blogging.Api/blogging.db` and is ignored
+by Git. Startup checks for pending migrations and applies them. Tests use isolated
+temporary databases and never use the development database.
+
 ## Implemented Endpoints
 
 - `GET /api/posts`: lists posts with `title` and `commentCount`.
@@ -71,6 +74,9 @@ or HTTPS CORS request.
 Invalid payloads and identifiers return `400` with an `error` field. Missing posts
 return `404`, and unexpected failures return a generic `500` without implementation
 details.
+
+Detailed request and response examples are available in
+[`docs/api/README.md`](docs/api/README.md).
 
 ## Quality Checks
 
@@ -86,6 +92,27 @@ dotnet list BloggingBackend.slnx package --vulnerable --include-transitive
 
 The implementation plan requires at least 85% line coverage and 85% branch
 coverage for production code once functional code is introduced.
+
+The current suite uses MSTest, Moq, Moq.AutoMock, Bogus, WebApplicationFactory,
+isolated SQLite fixtures, and Coverlet MSBuild.
+
+## Troubleshooting
+
+- **Swagger reports `Failed to fetch`:** open `http://localhost:5185/swagger` while
+  the API is running. Do not open `swagger/index.html` through `file://`.
+- **The database is locked:** stop other local API processes and retry. SQLite
+  migrations use EF Core's migration lock.
+- **The database schema is stale:** remove the ignored local `blogging.db` only in
+  development, then restart the API so pending migrations run again.
+- **The SDK is not found:** install .NET SDK 10 and verify `dotnet --version`.
+
+## Next Steps
+
+- Add pagination and filtering for post listing.
+- Add authentication and authorization.
+- Add richer validation and typed error contracts.
+- Add production migration coordination and deployment locks.
+- Add observability metrics, tracing, and rate limiting.
 
 ## Repository Layout
 
