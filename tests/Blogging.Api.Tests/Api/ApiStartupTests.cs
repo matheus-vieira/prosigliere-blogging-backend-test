@@ -1,5 +1,7 @@
+using System.Net;
 using Blogging.Repository.DependencyInjection;
 using Blogging.Repository.Persistence;
+using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace Blogging.Api.Tests;
 
@@ -16,13 +18,13 @@ public sealed class ApiStartupTests
     public async Task RootEndpointStartsWithMigratedDatabaseAsync()
     {
         using var factory = new BloggingApiFactory();
-        using var client = factory.CreateClient();
+        using var client = factory.CreateClient(
+            new WebApplicationFactoryClientOptions { AllowAutoRedirect = false });
 
         var response = await client.GetAsync("/").ConfigureAwait(false);
-        var content = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
 
-        Assert.IsTrue(response.IsSuccessStatusCode);
-        Assert.AreEqual("Hello World!", content);
+        Assert.AreEqual(HttpStatusCode.Redirect, response.StatusCode);
+        Assert.AreEqual("/swagger", response.Headers.Location?.OriginalString);
     }
 
     /// <summary>
