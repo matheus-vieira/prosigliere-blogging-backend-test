@@ -56,3 +56,10 @@ the client.
 
 Integration tests verify `/health`, `/swagger/v1/swagger.json`, and safe exception
 responses.
+
+## Current Feature Routes
+
+- `GET /api/posts`
+- `POST /api/posts`
+- `GET /api/posts/{id}`
+- `POST /api/posts/{id}/comments`

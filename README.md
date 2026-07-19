@@ -61,6 +61,13 @@ Always open Swagger through the running API, for example
 file system, because a `file://` page cannot execute the OpenAPI request as an HTTP
 or HTTPS CORS request.
 
+## Implemented Endpoints
+
+- `GET /api/posts`: lists posts with `title` and `commentCount`.
+- `POST /api/posts`: creates a post with `title` and `content`.
+- `GET /api/posts/{id}`: returns a post with its content and comments.
+- `POST /api/posts/{id}/comments`: creates a comment for an existing post.
+
 ## Quality Checks
 
 Run the complete local validation before opening a pull request:
