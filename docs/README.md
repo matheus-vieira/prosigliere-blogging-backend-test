@@ -24,3 +24,4 @@ and architectural decisions belong here.
 
 - [EF Core decisions](archtectural-decision-records/ef/)
 - [SQLite decisions](archtectural-decision-records/ef/sqlite/)
+- [API bootstrap decisions](archtectural-decision-records/api/)

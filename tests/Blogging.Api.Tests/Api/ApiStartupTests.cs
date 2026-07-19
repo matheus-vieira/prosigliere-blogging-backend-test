@@ -1,7 +1,5 @@
 using Blogging.Repository.DependencyInjection;
 using Blogging.Repository.Persistence;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc.Testing;
 
 namespace Blogging.Api.Tests;
 
@@ -54,27 +52,4 @@ public sealed class ApiStartupTests
             context.Database.ProviderName);
     }
 
-    private sealed class BloggingApiFactory : WebApplicationFactory<Program>
-    {
-        private readonly string databasePath = Path.Combine(
-            Path.GetTempPath(),
-            $"blogging-api-{Guid.NewGuid():N}.db");
-
-        protected override void ConfigureWebHost(IWebHostBuilder builder)
-        {
-            builder.UseSetting(
-                "BlogDatabase:ConnectionString",
-                $"Data Source={databasePath}");
-        }
-
-        protected override void Dispose(bool disposing)
-        {
-            base.Dispose(disposing);
-
-            if (disposing && File.Exists(databasePath))
-            {
-                File.Delete(databasePath);
-            }
-        }
-    }
 }

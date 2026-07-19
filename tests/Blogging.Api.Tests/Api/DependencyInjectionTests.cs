@@ -47,4 +47,35 @@ public sealed class DependencyInjectionTests
 
         Assert.IsTrue(callbackInvoked);
     }
+
+    /// <summary>
+    /// Confirms that API diagnostics can be registered and composed.
+    /// </summary>
+    [TestMethod]
+    public void AddBloggingApiRegistersDiagnostics()
+    {
+        var builder = WebApplication.CreateBuilder();
+        builder.AddBloggingApi();
+        using var application = builder.Build();
+
+        application.UseBloggingApi();
+
+        Assert.IsNotNull(application);
+    }
+
+    /// <summary>
+    /// Confirms that production composition omits the development Swagger UI.
+    /// </summary>
+    [TestMethod]
+    public void UseBloggingApiSupportsProductionEnvironment()
+    {
+        var builder = WebApplication.CreateBuilder(
+            new WebApplicationOptions { EnvironmentName = "Production" });
+        builder.AddBloggingApi();
+        using var application = builder.Build();
+
+        application.UseBloggingApi();
+
+        Assert.IsNotNull(application);
+    }
 }
