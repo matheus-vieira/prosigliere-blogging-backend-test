@@ -26,7 +26,12 @@ public static class UseBloggingApiAsyncExtension
         application.UseExceptionHandler();
 
         application.UseSwagger();
-        application.UseSwaggerUI();
+        application.UseSwaggerUI(options =>
+        {
+            options.SwaggerEndpoint(
+                "/swagger/v1/swagger.json",
+                "Blogging Backend API v1");
+        });
 
         application.MapHealthChecks("/health");
         application.MapBloggingEndpoints();

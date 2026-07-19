@@ -8,6 +8,11 @@ discovery. The application exposes the generated OpenAPI document at
 root path redirects to Swagger UI so the local challenge has an immediate
 interactive entry point.
 
+The Swagger endpoint is configured explicitly as `/swagger/v1/swagger.json`.
+Swagger must be opened through the running HTTP/HTTPS application, not as a local
+`file://` HTML document; local file origins cannot issue the browser request to the
+OpenAPI endpoint.
+
 The API registration is isolated in `AddBloggingApi`, while startup, middleware,
 diagnostic endpoints, and feature endpoint mapping are composed by
 `UseBloggingApiAsync`. Each extension method is kept in its own receiver-specific

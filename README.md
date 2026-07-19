@@ -56,6 +56,11 @@ Swagger UI is available at `/swagger` and the OpenAPI document is available at
 `/swagger/v1/swagger.json`. The health endpoint is available at `/health` in every
 environment.
 
+Always open Swagger through the running API, for example
+`http://localhost:5185/swagger`. Do not open `swagger/index.html` directly from the
+file system, because a `file://` page cannot execute the OpenAPI request as an HTTP
+or HTTPS CORS request.
+
 ## Quality Checks
 
 Run the complete local validation before opening a pull request:
