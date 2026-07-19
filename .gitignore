@@ -178,7 +178,7 @@ coverage*.info
 coverage/
 !coverage/
 !coverage/latest/
-!coverage/latest/coverage.cobertura.xml
+!coverage/latest/README.md
 TestResults/
 
 # Local SQLite databases
