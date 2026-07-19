@@ -107,6 +107,41 @@ Response `201`:
 
 Missing posts return `404`; invalid identifiers or content return `400`.
 
+## Search Posts
+
+```http
+GET /api/posts/search?title=api&hasComments=true&page=1&pageSize=20&sortBy=-title&sortBy=commentCount
+```
+
+All filters are optional and are combined with `AND`:
+
+- `title`: case-insensitive title text filter.
+- `content`: case-insensitive content text filter.
+- `hasComments`: filters posts with or without comments.
+- `minCommentCount` and `maxCommentCount`: comment count range.
+- `page` and `pageSize`: one-based pagination; page size is limited to 100.
+- `sortBy`: repeatable fields `id`, `title`, `content`, or `commentCount`; prefix a
+  field with `-` for descending order. Fields are applied in the supplied order.
+
+Response `200`:
+
+```json
+{
+  "items": [
+    {
+      "id": 1,
+      "title": "API post",
+      "commentCount": 2
+    }
+  ],
+  "page": 1,
+  "pageSize": 20,
+  "totalCount": 1
+}
+```
+
+Invalid ranges, pagination values, or sort fields return `400`.
+
 ## Error Contract
 
 Expected validation and resource errors use:
