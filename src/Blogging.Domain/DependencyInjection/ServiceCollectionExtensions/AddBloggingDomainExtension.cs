@@ -26,6 +26,7 @@ public static class AddBloggingDomainExtension
         ArgumentNullException.ThrowIfNull(registerRepository);
 
         services.AddScoped<BlogPostService>();
+        services.AddScoped<PostSearchService>();
         registerRepository(services, configuration);
         return services;
     }

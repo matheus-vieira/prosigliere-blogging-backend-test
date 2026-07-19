@@ -1,5 +1,6 @@
 using Blogging.Domain.Entities;
 using Blogging.Domain.Posts;
+using Blogging.Domain.Specifications;
 using Blogging.Repository.Persistence;
 using Microsoft.EntityFrameworkCore;
 
@@ -12,10 +13,12 @@ public sealed class BlogPostRepository(BlogDbContext context) : IBlogPostReposit
 {
     /// <inheritdoc />
     public async Task<IReadOnlyList<BlogPostSummary>> ListAsync(
+        ISpecification<BlogPost> specification,
         CancellationToken cancellationToken)
     {
         return await context.BlogPosts
             .AsNoTracking()
+            .Where(specification.Criteria)
             .OrderBy(post => post.Id)
             .Select(post => new BlogPostSummary(
                 post.Id,
@@ -39,13 +42,14 @@ public sealed class BlogPostRepository(BlogDbContext context) : IBlogPostReposit
 
     /// <inheritdoc />
     public async Task<BlogPostDetail?> GetByIdAsync(
-        int postId,
+        ISpecification<BlogPost> specification,
         CancellationToken cancellationToken)
     {
         var post = await context.BlogPosts
             .AsNoTracking()
             .Include(item => item.Comments)
-            .SingleOrDefaultAsync(item => item.Id == postId, cancellationToken)
+            .Where(specification.Criteria)
+            .SingleOrDefaultAsync(cancellationToken)
             .ConfigureAwait(false);
 
         return post is null
@@ -84,5 +88,47 @@ public sealed class BlogPostRepository(BlogDbContext context) : IBlogPostReposit
         await context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
 
         return new CommentSummary(comment.Id, comment.PostId, comment.Content);
+    }
+
+    /// <inheritdoc />
+    public async Task<PagedResult<BlogPostSummary>> SearchAsync(
+        ISpecification<BlogPost> specification,
+        CancellationToken cancellationToken)
+    {
+        ArgumentNullException.ThrowIfNull(specification);
+
+        var query = context.BlogPosts
+            .AsNoTracking()
+            .Where(specification.Criteria);
+        var totalCount = await query.CountAsync(cancellationToken).ConfigureAwait(false);
+        IOrderedQueryable<BlogPost>? orderedQuery = null;
+
+        foreach (var ordering in specification.Orderings)
+        {
+            orderedQuery = orderedQuery is null
+                ? ordering.Descending
+                    ? query.OrderByDescending(ordering.KeySelector)
+                    : query.OrderBy(ordering.KeySelector)
+                : ordering.Descending
+                    ? orderedQuery.ThenByDescending(ordering.KeySelector)
+                    : orderedQuery.ThenBy(ordering.KeySelector);
+        }
+
+        var pagedQuery = (orderedQuery ?? query.OrderBy(post => post.Id))
+            .Skip((specification.PageNumber - 1) * specification.PageSize)
+            .Take(specification.PageSize);
+        var items = await pagedQuery
+            .Select(post => new BlogPostSummary(
+                post.Id,
+                post.Title,
+                post.Comments.Count))
+            .ToListAsync(cancellationToken)
+            .ConfigureAwait(false);
+
+        return new PagedResult<BlogPostSummary>(
+            items,
+            specification.PageNumber,
+            specification.PageSize,
+            totalCount);
     }
 }

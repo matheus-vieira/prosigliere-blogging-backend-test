@@ -1,5 +1,6 @@
 using Blogging.Api.Tests.TestData;
 using Blogging.Domain.Posts;
+using Blogging.Domain.Specifications;
 using Moq;
 
 namespace Blogging.Api.Tests;
@@ -19,7 +20,9 @@ public sealed class BlogPostServiceTests
     {
         var expected = new[] { new BlogPostSummary(1, "A title", 2) };
         var repository = new Mock<IBlogPostRepository>();
-        repository.Setup(item => item.ListAsync(It.IsAny<CancellationToken>()))
+        repository.Setup(item => item.ListAsync(
+                It.IsAny<Blogging.Domain.Specifications.ISpecification<Blogging.Domain.Entities.BlogPost>>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(expected);
         var service = new BlogPostService(repository.Object);
 
@@ -76,7 +79,9 @@ public sealed class BlogPostServiceTests
             "Content",
             Array.Empty<CommentSummary>());
         var repository = new Mock<IBlogPostRepository>();
-        repository.Setup(item => item.GetByIdAsync(1, It.IsAny<CancellationToken>()))
+        repository.Setup(item => item.GetByIdAsync(
+                It.IsAny<ISpecification<Blogging.Domain.Entities.BlogPost>>(),
+                It.IsAny<CancellationToken>()))
             .ReturnsAsync(expected);
         var service = new BlogPostService(repository.Object);
 

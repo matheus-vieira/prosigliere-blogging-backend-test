@@ -1,3 +1,5 @@
+using Blogging.Domain.Entities;
+
 namespace Blogging.Domain.Posts;
 
 using Blogging.Domain.Validation;
@@ -15,7 +17,9 @@ public sealed class BlogPostService(IBlogPostRepository repository)
     public Task<IReadOnlyList<BlogPostSummary>> ListAsync(
         CancellationToken cancellationToken)
     {
-        return repository.ListAsync(cancellationToken);
+        return repository.ListAsync(
+            PostSpecifications.FromFilter(new PostFilter()),
+            cancellationToken);
     }
 
     /// <summary>
@@ -48,7 +52,9 @@ public sealed class BlogPostService(IBlogPostRepository repository)
         int postId,
         CancellationToken cancellationToken)
     {
-        return repository.GetByIdAsync(postId, cancellationToken);
+        return repository.GetByIdAsync(
+            PostSpecifications.FromFilter(new PostFilter { Id = postId }),
+            cancellationToken);
     }
 
     /// <summary>

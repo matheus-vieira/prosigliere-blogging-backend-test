@@ -17,6 +17,7 @@ public static class MapPostsEndpointsExtension
 
         endpoints.MapListPostsEndpoint();
         endpoints.MapCreatePostEndpoint();
+        endpoints.MapSearchPostsEndpoint();
         endpoints.MapGetPostEndpoint();
         endpoints.MapCreateCommentEndpoint();
 
