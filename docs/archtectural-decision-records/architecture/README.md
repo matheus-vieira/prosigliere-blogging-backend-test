@@ -30,11 +30,73 @@ The dependency direction is inward: API may depend on Domain contracts, and the
 Repository adapts persistence to Domain contracts. Domain remains independent of
 both outer layers.
 
-## Current Baseline
+## Composition Extension Flow
 
-The first branch intentionally contains only the API host and test project. The
-Domain and Repository boundaries will be introduced with the corresponding
-features, without prematurely creating empty projects or abstractions.
+The API composition root exposes one high-level entry point:
+
+```csharp
+builder.AddBloggingDomain();
+```
+
+The call is a façade for layer registration. It invokes Domain registration, and
+Domain invokes a Repository registration callback. `Program.cs` must not call
+`AddBloggingRepository`, configure `DbContext`, or manipulate migration details.
+Application startup uses `UseBloggingAsync`, which delegates database initialization
+to Repository code.
+
+The intended flow is:
+
+```text
+Program.cs
+  -> API.AddBloggingDomain()
+      -> Domain.AddBloggingDomain()
+          -> Repository registration callback
+  -> API.UseBloggingAsync()
+      -> Repository.UseBloggingDatabaseAsync()
+```
+
+The callback avoids a project-reference cycle while keeping the composition flow
+owned by Domain. Domain business objects remain independent from EF Core and the
+callback is only a startup registration concern.
+
+## Extension Organization
+
+Extension methods are grouped by receiver and kept one method per file:
+
+```text
+API/DependencyInjection/
+  WebApplicationBuilderExtensions/
+  WebApplicationExtensions/
+Domain/DependencyInjection/
+  ServiceCollectionExtensions/
+Repository/DependencyInjection/
+  ServiceCollectionExtensions/
+  ServiceProviderExtensions/
+```
+
+This structure makes the composition surface discoverable and avoids a large
+catch-all extension class. The same rule applies to test-specific extensions when
+they become necessary.
+
+## Configuration Boundary
+
+The composition boundary may read `IConfiguration` once, but Repository services
+consume strongly typed `BlogDatabaseOptions` through `IOptions<T>`. This keeps
+connection-string knowledge and startup flags out of business code.
+
+Repository owns options binding and validation, `BlogDbContext` registration, the
+SQLite provider configuration, and `UseBloggingDatabaseAsync`. The API owns only
+the orchestration extensions and does not know table mappings or EF query behavior.
+
+## Startup Migration Policy
+
+The local challenge application may apply pending migrations during startup through
+`Database.GetPendingMigrationsAsync` followed by `Database.MigrateAsync` when the
+database is behind the model. This makes startup initialization idempotent without
+an application option that duplicates database state. Production deployments must
+review concurrency, locking, rollback, and permissions before using startup
+migrations; an explicit deployment migration step may be safer for multi-instance
+deployments.
 
 ## Alternatives Considered
 
@@ -45,12 +107,19 @@ features, without prematurely creating empty projects or abstractions.
 - Microservices: rejected because the challenge is a single bounded application.
 - Full Clean Architecture template: deferred because its ceremony exceeds the
   current scope.
+- Passing raw `IConfiguration` through Domain services: rejected because it leaks
+  infrastructure concerns into business code.
+- Calling Repository directly from `Program.cs`: rejected because it duplicates
+  composition knowledge and bypasses the Domain façade.
 
 ## Consequences
 
 - Business rules can be tested without an HTTP server.
 - Persistence integration can be tested against SQLite without mocking EF behavior.
 - New dependencies must respect the layer direction.
+- A project-reference cycle between Domain and Repository is prohibited. Any
+  concrete registration bridge must be isolated rather than solved with circular
+  references or reflection.
 - Small files and feature-oriented folders remain preferred over large global
   technical folders.
 
