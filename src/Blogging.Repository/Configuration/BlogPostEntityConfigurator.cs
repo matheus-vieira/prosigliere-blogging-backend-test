@@ -1,14 +1,13 @@
 using Blogging.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Blogging.Repository.Configuration;
 
-internal sealed class BlogPostEntityConfigurator : IEntityTypeConfigurator
+internal sealed class BlogPostEntityConfigurator : IEntityTypeConfigurator<BlogPost>
 {
-    public void Configure(ModelBuilder modelBuilder)
+    public void Configure(EntityTypeBuilder<BlogPost> entity)
     {
-        var entity = modelBuilder.Entity<BlogPost>();
-
         entity.ToTable("blog_posts");
         entity.HasKey(post => post.Id);
         entity.Property(post => post.Id).ValueGeneratedOnAdd();

@@ -1,14 +1,13 @@
 using Blogging.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Blogging.Repository.Configuration;
 
-internal sealed class CommentEntityConfigurator : IEntityTypeConfigurator
+internal sealed class CommentEntityConfigurator : IEntityTypeConfigurator<Comment>
 {
-    public void Configure(ModelBuilder modelBuilder)
+    public void Configure(EntityTypeBuilder<Comment> entity)
     {
-        var entity = modelBuilder.Entity<Comment>();
-
         entity.ToTable("comments");
         entity.HasKey(comment => comment.Id);
         entity.Property(comment => comment.Id).ValueGeneratedOnAdd();

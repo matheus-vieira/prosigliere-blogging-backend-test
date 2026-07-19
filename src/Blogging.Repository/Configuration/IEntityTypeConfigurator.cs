@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Blogging.Repository.Configuration;
 
@@ -7,9 +8,15 @@ namespace Blogging.Repository.Configuration;
 /// </summary>
 public interface IEntityTypeConfigurator
 {
-    /// <summary>
-    /// Configures entity mappings in the supplied model builder.
-    /// </summary>
-    /// <param name="modelBuilder">The EF Core model builder.</param>
-    void Configure(ModelBuilder modelBuilder);
+}
+
+/// <summary>
+/// Marks an EF Core entity configuration for assembly scanning.
+/// </summary>
+/// <typeparam name="TEntity">The entity type being configured.</typeparam>
+public interface IEntityTypeConfigurator<TEntity> :
+    IEntityTypeConfigurator,
+    IEntityTypeConfiguration<TEntity>
+    where TEntity : class
+{
 }
