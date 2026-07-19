@@ -1,4 +1,3 @@
-using System.Linq.Expressions;
 using Blogging.Domain.Entities;
 using Blogging.Domain.Posts.Specifications;
 using Blogging.Domain.Specifications;
@@ -56,10 +55,7 @@ public static class PostSpecifications
                 new MaximumCommentCountSpecification(filter.MaxCommentCount.Value));
         }
 
-        var orderings = filter.Sorts
-            .Select(CreateOrderClause)
-            .ToList();
-
+        var orderings = filter.Sorts.Select(CreateOrderClause).ToList();
         if (orderings.Count == 0)
         {
             orderings.Add(new OrderClause<BlogPost>(post => (object)post.Id, false));
@@ -82,49 +78,5 @@ public static class PostSpecifications
                 sort.Descending),
             _ => throw new ArgumentException($"Unknown sort field: {sort.Field}.", nameof(sort))
         };
-    }
-
-    private sealed class AllPostsSpecification : Specification<BlogPost>
-    {
-        public override Expression<Func<BlogPost, bool>> Criteria => post => true;
-    }
-
-    private sealed class PostIdSpecification(int id) : Specification<BlogPost>
-    {
-        public override Expression<Func<BlogPost, bool>> Criteria => post => post.Id == id;
-    }
-
-#pragma warning disable CA1304, CA1311, CA1862
-    private sealed class PostTitleSpecification(string value) : Specification<BlogPost>
-    {
-        // ToLower is translated to SQL LOWER by the relational provider.
-        public override Expression<Func<BlogPost, bool>> Criteria =>
-            post => post.Title.ToLower().Contains(value.ToLower());
-    }
-
-    private sealed class PostContentSpecification(string value) : Specification<BlogPost>
-    {
-        // ToLower is translated to SQL LOWER by the relational provider.
-        public override Expression<Func<BlogPost, bool>> Criteria =>
-            post => post.Content.ToLower().Contains(value.ToLower());
-    }
-#pragma warning restore CA1304, CA1311, CA1862
-
-    private sealed class HasCommentsSpecification(bool value) : Specification<BlogPost>
-    {
-        public override Expression<Func<BlogPost, bool>> Criteria =>
-            post => post.Comments.Any() == value;
-    }
-
-    private sealed class MinimumCommentCountSpecification(int value) : Specification<BlogPost>
-    {
-        public override Expression<Func<BlogPost, bool>> Criteria =>
-            post => post.Comments.Count >= value;
-    }
-
-    private sealed class MaximumCommentCountSpecification(int value) : Specification<BlogPost>
-    {
-        public override Expression<Func<BlogPost, bool>> Criteria =>
-            post => post.Comments.Count <= value;
     }
 }
