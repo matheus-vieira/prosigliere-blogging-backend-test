@@ -1,4 +1,5 @@
 using Blogging.Domain.Entities;
+using Blogging.Domain.Validation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -11,8 +12,8 @@ internal sealed class BlogPostEntityConfigurator : IEntityTypeConfigurator<BlogP
         entity.ToTable("blog_posts");
         entity.HasKey(post => post.Id);
         entity.Property(post => post.Id).ValueGeneratedOnAdd();
-        entity.Property(post => post.Title).IsRequired().HasMaxLength(200);
-        entity.Property(post => post.Content).IsRequired().HasMaxLength(10000);
+        entity.Property(post => post.Title).IsRequired().HasMaxLength(PostValidationRules.TitleMaxLength);
+        entity.Property(post => post.Content).IsRequired().HasMaxLength(PostValidationRules.ContentMaxLength);
         entity.HasMany(post => post.Comments)
             .WithOne(comment => comment.Post)
             .HasForeignKey(comment => comment.PostId)

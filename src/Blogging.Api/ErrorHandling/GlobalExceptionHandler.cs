@@ -1,3 +1,4 @@
+using Blogging.Api.Contracts;
 using Microsoft.AspNetCore.Diagnostics;
 
 namespace Blogging.Api.ErrorHandling;
@@ -20,13 +21,22 @@ public sealed partial class GlobalExceptionHandler(
         Exception exception,
         CancellationToken cancellationToken)
     {
-        Log.UnhandledRequestException(logger, exception);
+        Log.UnhandledRequestException(
+            logger,
+            exception.GetType().Name,
+            httpContext.TraceIdentifier);
 
         if (!httpContext.Response.HasStarted)
         {
-            httpContext.Response.StatusCode = StatusCodes.Status500InternalServerError;
+            var isInvalidRequest = exception is BadHttpRequestException;
+            httpContext.Response.StatusCode = isInvalidRequest
+                ? StatusCodes.Status400BadRequest
+                : StatusCodes.Status500InternalServerError;
+            var message = isInvalidRequest
+                ? "Invalid request."
+                : "An unexpected error occurred.";
             await httpContext.Response.WriteAsJsonAsync(
-                new { error = "An unexpected error occurred." },
+                new ApiErrorResponse(message),
                 cancellationToken).ConfigureAwait(false);
         }
 
@@ -38,9 +48,10 @@ public sealed partial class GlobalExceptionHandler(
         [LoggerMessage(
             EventId = 1000,
             Level = LogLevel.Error,
-            Message = "Unhandled request exception.")]
+            Message = "Unhandled request exception. Type: {exceptionType}; TraceId: {traceId}.")]
         public static partial void UnhandledRequestException(
             ILogger logger,
-            Exception exception);
+            string exceptionType,
+            string traceId);
     }
 }

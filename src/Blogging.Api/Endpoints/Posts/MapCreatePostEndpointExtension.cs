@@ -1,3 +1,4 @@
+using Blogging.Api.Contracts;
 using Blogging.Api.Posts.Contracts;
 using Blogging.Domain.Posts;
 
@@ -21,12 +22,17 @@ public static class MapCreatePostEndpointExtension
         endpoints.MapPost(
                 "/api/posts",
                 async (
-                    CreatePostRequest request,
+                    CreatePostRequest? request,
                     BlogPostService service,
                     CancellationToken cancellationToken) =>
                 {
                     try
                     {
+                        if (request is null)
+                        {
+                            return Results.BadRequest(new ApiErrorResponse("Request body is required."));
+                        }
+
                         var post = await service.CreateAsync(
                                 new CreateBlogPostCommand
                                 {
@@ -45,7 +51,7 @@ public static class MapCreatePostEndpointExtension
                     }
                     catch (ArgumentException exception)
                     {
-                        return Results.BadRequest(new { error = exception.Message });
+                        return Results.BadRequest(new ApiErrorResponse(exception.Message));
                     }
                 })
             .WithTags("Posts")

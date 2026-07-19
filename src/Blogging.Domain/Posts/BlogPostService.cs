@@ -1,5 +1,7 @@
 namespace Blogging.Domain.Posts;
 
+using Blogging.Domain.Validation;
+
 /// <summary>
 /// Executes the application use cases for blog posts.
 /// </summary>
@@ -27,10 +29,13 @@ public sealed class BlogPostService(IBlogPostRepository repository)
         CancellationToken cancellationToken)
     {
         ArgumentNullException.ThrowIfNull(command);
-        ArgumentException.ThrowIfNullOrWhiteSpace(command.Title);
-        ArgumentException.ThrowIfNullOrWhiteSpace(command.Content);
+        var normalizedCommand = command with
+        {
+            Title = PostValidationRules.NormalizeTitle(command.Title),
+            Content = PostValidationRules.NormalizeContent(command.Content)
+        };
 
-        return repository.CreateAsync(command, cancellationToken);
+        return repository.CreateAsync(normalizedCommand, cancellationToken);
     }
 
     /// <summary>
@@ -60,8 +65,11 @@ public sealed class BlogPostService(IBlogPostRepository repository)
     {
         ArgumentOutOfRangeException.ThrowIfNegativeOrZero(postId);
         ArgumentNullException.ThrowIfNull(command);
-        ArgumentException.ThrowIfNullOrWhiteSpace(command.Content);
+        var normalizedCommand = command with
+        {
+            Content = PostValidationRules.NormalizeCommentContent(command.Content)
+        };
 
-        return repository.CreateCommentAsync(postId, command, cancellationToken);
+        return repository.CreateCommentAsync(postId, normalizedCommand, cancellationToken);
     }
 }
