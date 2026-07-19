@@ -81,4 +81,23 @@ public sealed class CreateCommentEndpointTests
 
         Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
     }
+
+    /// <summary>
+    /// Confirms that a missing comment request body returns bad request.
+    /// </summary>
+    [TestMethod]
+    public async Task PostCommentRejectsMissingBodyAsync()
+    {
+        using var factory = new BloggingApiFactory();
+        using var client = factory.CreateClient();
+        using var content = new StringContent(
+            string.Empty,
+            System.Text.Encoding.UTF8,
+            "application/json");
+
+        var response = await client.PostAsync("/api/posts/1/comments", content)
+            .ConfigureAwait(false);
+
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+    }
 }

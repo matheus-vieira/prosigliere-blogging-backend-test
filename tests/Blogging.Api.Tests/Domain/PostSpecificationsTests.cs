@@ -43,4 +43,23 @@ public sealed class PostSpecificationsTests
         Assert.HasCount(1, specification.Orderings);
         Assert.IsFalse(specification.Orderings[0].Descending);
     }
+
+    /// <summary>
+    /// Confirms that every supported sort field can be configured.
+    /// </summary>
+    [TestMethod]
+    public void FromFilterSupportsAllSortFields()
+    {
+        var specification = PostSpecifications.FromFilter(new PostFilter
+        {
+            Sorts = [
+                new PostSort("id", false),
+                new PostSort("title", false),
+                new PostSort("content", false),
+                new PostSort("commentCount", true)
+            ]
+        });
+
+        Assert.HasCount(4, specification.Orderings);
+    }
 }

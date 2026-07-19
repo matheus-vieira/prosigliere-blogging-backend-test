@@ -55,4 +55,22 @@ public sealed class CreatePostEndpointTests
         Assert.IsNotNull(posts);
         Assert.IsEmpty(posts);
     }
+
+    /// <summary>
+    /// Confirms that a missing request body returns bad request.
+    /// </summary>
+    [TestMethod]
+    public async Task PostPostsRejectsMissingBodyAsync()
+    {
+        using var factory = new BloggingApiFactory();
+        using var client = factory.CreateClient();
+        using var content = new StringContent(
+            string.Empty,
+            System.Text.Encoding.UTF8,
+            "application/json");
+
+        var response = await client.PostAsync("/api/posts", content).ConfigureAwait(false);
+
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+    }
 }
