@@ -17,6 +17,9 @@ providers, model configuration, migrations, and persistence boundaries.
 - Keep build analyzers and compiler settings in `Directory.Build.props`.
 - Apply entity mappings through the project `IEntityTypeConfigurator` abstraction
   from `OnModelCreating`, keeping EF configuration discoverable and testable.
+- Define `IEntityTypeConfigurator<TEntity>` as an EF-compatible marker and use
+  `ApplyConfigurationsFromAssembly` so adding a new mapping does not require
+  editing `BlogDbContext.OnModelCreating`.
 - Validate provider changes with restore, build, integration tests, and package
   vulnerability scanning.
 

@@ -17,6 +17,18 @@ The provider dependencies are centrally managed in `Directory.Packages.props`.
 The EF Core relational package is also referenced directly, as recommended by the
 official provider documentation, to make relational patch updates explicit.
 
+## Application Startup
+
+The Repository layer exposes `UseBloggingDatabaseAsync`, which applies pending
+migrations through `Database.GetPendingMigrationsAsync` followed by
+`Database.MigrateAsync` when needed. The API invokes this
+through `UseBloggingAsync`; `Program.cs` does not access `DbContext` or migration
+APIs directly.
+
+The connection string and startup flag are bound into `BlogDatabaseOptions`.
+Repository services consume `IOptions<BlogDatabaseOptions>` instead of receiving
+raw `IConfiguration`.
+
 ## Native SQLite Security Pin
 
 The provider graph previously resolved `SQLitePCLRaw.lib.e_sqlite3` `2.1.11`, which
@@ -31,6 +43,9 @@ EF Core or the SQLite provider changes its dependency graph.
 - Development requires no database server.
 - Integration tests exercise a relational provider and foreign keys.
 - The native SQLite package must be monitored for compatibility and security.
+- Local startup can create or update the schema without a separate command.
+- Multi-instance production deployments must review migration locking and may use
+  an explicit deployment migration step instead.
 - Production deployment is not implied by this decision; the challenge scope is
   local and test-oriented.
 

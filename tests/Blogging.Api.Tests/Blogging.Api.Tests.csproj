@@ -19,6 +19,7 @@
     <PackageReference Include="Moq.AutoMock" />
     <PackageReference Include="MSTest.TestAdapter" />
     <PackageReference Include="MSTest.TestFramework" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" />
   </ItemGroup>
 
   <ItemGroup>
@@ -27,6 +28,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\Blogging.Api\Blogging.Api.csproj" />
+    <ProjectReference Include="..\..\src\Blogging.Domain\Blogging.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Blogging.Repository\Blogging.Repository.csproj" />
   </ItemGroup>
 
 </Project>

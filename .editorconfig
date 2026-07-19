@@ -22,3 +22,6 @@ dotnet_diagnostic.IDE0055.severity = warning
 dotnet_diagnostic.IDE0060.severity = warning
 dotnet_diagnostic.CA1822.severity = warning
 dotnet_diagnostic.CA2007.severity = warning
+
+[**/Migrations/*.cs]
+charset = utf-8-bom

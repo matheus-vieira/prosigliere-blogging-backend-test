@@ -9,15 +9,18 @@ The original challenge statement is preserved in
 
 ## Current State
 
-The repository currently contains the project baseline. It includes the solution,
-API project, MSTest project, shared build configuration, and package management.
-The functional endpoints and persistence model will be implemented in subsequent
-branches.
+The repository currently contains the API baseline and the first persistence slice.
+It includes the API, Domain, and Repository projects, shared build configuration,
+package management, EF Core mappings, SQLite migrations, and persistence tests.
+The functional HTTP endpoints will be implemented in subsequent branches.
 
 ## Technology Stack
 
 - .NET 10 and ASP.NET Core Minimal APIs.
 - Entity Framework Core 10 with the Microsoft SQLite provider.
+- API, Domain, and Repository layers composed through `AddBloggingDomain`.
+- Automatic local schema creation and pending migration application through
+  `UseBloggingAsync` and `UseBloggingDatabaseAsync`.
 - NuGet Central Package Management through `Directory.Packages.props`.
 - `Directory.Build.props` for analyzers, nullable reference types, code style, and
   warnings as errors.
@@ -42,8 +45,8 @@ dotnet test BloggingBackend.slnx
 dotnet run --project src/Blogging.Api/Blogging.Api.csproj
 ```
 
-The API currently exposes the template root endpoint. The blogging endpoints will
-be added according to the implementation plan.
+The API currently exposes the template root endpoint. On startup, the configured
+SQLite database checks for pending EF Core migrations and applies them when needed.
 
 ## Quality Checks
 
@@ -63,7 +66,9 @@ coverage for production code once functional code is introduced.
 ## Repository Layout
 
 ```text
-src/Blogging.Api/       API and HTTP composition root
+src/Blogging.Api/         API and HTTP composition root
+src/Blogging.Domain/      Domain entities and service registration
+src/Blogging.Repository/  EF Core context, mappings, migrations, and SQLite
 tests/Blogging.Api.Tests/ MSTest unit and integration tests
 docs/                   Project documentation and architectural decisions
 challenge/              Original coding challenge
