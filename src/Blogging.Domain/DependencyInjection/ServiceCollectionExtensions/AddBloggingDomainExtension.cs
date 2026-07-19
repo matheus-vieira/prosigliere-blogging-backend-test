@@ -1,3 +1,4 @@
+using Blogging.Domain.Posts;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -24,6 +25,7 @@ public static class AddBloggingDomainExtension
         ArgumentNullException.ThrowIfNull(configuration);
         ArgumentNullException.ThrowIfNull(registerRepository);
 
+        services.AddScoped<BlogPostService>();
         registerRepository(services, configuration);
         return services;
     }
