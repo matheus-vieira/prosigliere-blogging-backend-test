@@ -36,4 +36,53 @@ public sealed class BlogPostRepository(BlogDbContext context) : IBlogPostReposit
 
         return new BlogPostSummary(post.Id, post.Title, 0);
     }
+
+    /// <inheritdoc />
+    public async Task<BlogPostDetail?> GetByIdAsync(
+        int postId,
+        CancellationToken cancellationToken)
+    {
+        var post = await context.BlogPosts
+            .AsNoTracking()
+            .Include(item => item.Comments)
+            .SingleOrDefaultAsync(item => item.Id == postId, cancellationToken)
+            .ConfigureAwait(false);
+
+        return post is null
+            ? null
+            : new BlogPostDetail(
+                post.Id,
+                post.Title,
+                post.Content,
+                post.Comments
+                    .OrderBy(comment => comment.Id)
+                    .Select(comment => new CommentSummary(
+                        comment.Id,
+                        comment.PostId,
+                        comment.Content))
+                    .ToArray());
+    }
+
+    /// <inheritdoc />
+    public async Task<CommentSummary?> CreateCommentAsync(
+        int postId,
+        CreateCommentCommand command,
+        CancellationToken cancellationToken)
+    {
+        var postExists = await context.BlogPosts
+            .AsNoTracking()
+            .AnyAsync(post => post.Id == postId, cancellationToken)
+            .ConfigureAwait(false);
+
+        if (!postExists)
+        {
+            return null;
+        }
+
+        var comment = new Comment(postId, command.Content);
+        context.Comments.Add(comment);
+        await context.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+
+        return new CommentSummary(comment.Id, comment.PostId, comment.Content);
+    }
 }

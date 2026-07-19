@@ -17,6 +17,8 @@ public static class MapPostsEndpointsExtension
 
         endpoints.MapListPostsEndpoint();
         endpoints.MapCreatePostEndpoint();
+        endpoints.MapGetPostEndpoint();
+        endpoints.MapCreateCommentEndpoint();
 
         return endpoints;
     }
