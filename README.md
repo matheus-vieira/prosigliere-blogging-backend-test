@@ -21,6 +21,7 @@ The functional HTTP endpoints will be implemented in subsequent branches.
 - API, Domain, and Repository layers composed through `AddBloggingDomain`.
 - Automatic local schema creation and pending migration application through
   `UseBloggingAsync` and `UseBloggingDatabaseAsync`.
+- OpenAPI document and Development-only Swagger UI through Swashbuckle.
 - NuGet Central Package Management through `Directory.Packages.props`.
 - `Directory.Build.props` for analyzers, nullable reference types, code style, and
   warnings as errors.
@@ -47,6 +48,10 @@ dotnet run --project src/Blogging.Api/Blogging.Api.csproj
 
 The API currently exposes the template root endpoint. On startup, the configured
 SQLite database checks for pending EF Core migrations and applies them when needed.
+
+In Development, Swagger UI is available at `/swagger` and the OpenAPI document is
+available at `/swagger/v1/swagger.json`. The health endpoint is available at
+`/health` in every environment.
 
 ## Quality Checks
 

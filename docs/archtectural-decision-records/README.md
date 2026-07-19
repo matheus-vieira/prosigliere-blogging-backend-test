@@ -8,6 +8,7 @@ Each decision is kept close to the technology or layer it affects.
 - [`dotnet/`](dotnet/): runtime, solution format, and build configuration.
 - [`architecture/`](architecture/): application layer boundaries and dependency
   direction.
+- [`api/`](api/): bootstrap, health, OpenAPI, Swagger, and safe error handling.
 - [`nuget/`](nuget/): centralized package version management.
 - [`testing/`](testing/): test framework, isolation, mocks, and coverage.
 - [`ef/`](ef/): Entity Framework Core provider, model, and migration decisions.
