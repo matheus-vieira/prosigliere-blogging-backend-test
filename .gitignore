@@ -175,6 +175,15 @@ _TeamCity*
 coverage*.json
 coverage*.xml
 coverage*.info
+coverage/
+TestResults/
+
+# Local SQLite databases
+*.db
+*.db-shm
+*.db-wal
+*.sqlite
+*.sqlite3
 
 # Visual Studio code coverage results
 *.coverage
