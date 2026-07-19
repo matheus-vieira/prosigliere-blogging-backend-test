@@ -8,6 +8,7 @@ namespace Blogging.Api.Tests;
 /// Verifies API health, OpenAPI, Swagger UI, and safe exception responses.
 /// </summary>
 [TestClass]
+[TestCategory("Api")]
 public sealed class ApiDiagnosticsTests
 {
     /// <summary>
