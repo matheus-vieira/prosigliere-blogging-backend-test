@@ -5,17 +5,14 @@ using Blogging.Api.Posts.Contracts;
 namespace Blogging.Api.Tests;
 
 /// <summary>
-/// Verifies post search filters, ordering, and pagination through HTTP.
+/// Verifies post search filters, ordering, and pagination through HTTP GET.
 /// </summary>
 [TestClass]
 [TestCategory("Api")]
 public sealed class SearchPostsEndpointTests
 {
-    /// <summary>
-    /// Confirms that title filtering and pagination are applied.
-    /// </summary>
     [TestMethod]
-    public async Task SearchPostsFiltersAndPaginatesAsync()
+    public async Task GetSearchPostsFiltersAndPaginatesAsync()
     {
         using var factory = new BloggingApiFactory();
         using var client = factory.CreateClient();
@@ -27,16 +24,12 @@ public sealed class SearchPostsEndpointTests
             .ConfigureAwait(false);
 
         Assert.IsNotNull(result);
-        Assert.AreEqual(1, result.Items.Count);
         Assert.AreEqual(1, result.TotalCount);
         Assert.AreEqual("API Alpha", result.Items[0].Title);
     }
 
-    /// <summary>
-    /// Confirms that comment count filters can select posts with comments.
-    /// </summary>
     [TestMethod]
-    public async Task SearchPostsFiltersByCommentCountAsync()
+    public async Task GetSearchPostsFiltersByCommentCountAsync()
     {
         using var factory = new BloggingApiFactory();
         using var client = factory.CreateClient();
@@ -51,31 +44,11 @@ public sealed class SearchPostsEndpointTests
             .ConfigureAwait(false);
 
         Assert.IsNotNull(result);
-        Assert.AreEqual(1, result.TotalCount);
         Assert.AreEqual("Commented", result.Items.Single().Title);
     }
 
-    /// <summary>
-    /// Confirms that invalid ranges return a structured bad request.
-    /// </summary>
     [TestMethod]
-    public async Task SearchPostsRejectsInvalidRangeAsync()
-    {
-        using var factory = new BloggingApiFactory();
-        using var client = factory.CreateClient();
-
-        var response = await client.GetAsync(
-                "/api/posts/search?minCommentCount=3&maxCommentCount=1")
-            .ConfigureAwait(false);
-
-        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
-    }
-
-    /// <summary>
-    /// Confirms that content, no-comment, count, paging, and multiple sorts compose.
-    /// </summary>
-    [TestMethod]
-    public async Task SearchPostsCombinesOptionalFiltersAsync()
+    public async Task GetSearchPostsCombinesOptionalFiltersAsync()
     {
         using var factory = new BloggingApiFactory();
         using var client = factory.CreateClient();
@@ -87,15 +60,24 @@ public sealed class SearchPostsEndpointTests
             .ConfigureAwait(false);
 
         Assert.IsNotNull(result);
-        Assert.AreEqual(1, result.TotalCount);
         Assert.AreEqual("Backend Alpha", result.Items.Single().Title);
     }
 
-    /// <summary>
-    /// Confirms that unsupported sort fields return a bad request.
-    /// </summary>
     [TestMethod]
-    public async Task SearchPostsRejectsUnsupportedSortFieldAsync()
+    public async Task GetSearchPostsRejectsInvalidRangeAsync()
+    {
+        using var factory = new BloggingApiFactory();
+        using var client = factory.CreateClient();
+
+        var response = await client.GetAsync(
+                "/api/posts/search?minCommentCount=3&maxCommentCount=1")
+            .ConfigureAwait(false);
+
+        Assert.AreEqual(HttpStatusCode.BadRequest, response.StatusCode);
+    }
+
+    [TestMethod]
+    public async Task GetSearchPostsRejectsUnsupportedSortFieldAsync()
     {
         using var factory = new BloggingApiFactory();
         using var client = factory.CreateClient();

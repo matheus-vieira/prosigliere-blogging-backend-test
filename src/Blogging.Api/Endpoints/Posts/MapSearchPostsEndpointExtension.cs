@@ -11,7 +11,7 @@ namespace Blogging.Api.Endpoints.Posts;
 public static class MapSearchPostsEndpointExtension
 {
     /// <summary>
-    /// Maps `GET /api/posts/search` with optional filters.
+    /// Maps `GET /api/posts/search` with optional query-string filters.
     /// </summary>
     /// <param name="endpoints">The endpoint route builder.</param>
     /// <returns>The same route builder.</returns>
@@ -64,7 +64,7 @@ public static class MapSearchPostsEndpointExtension
                 })
             .WithTags("Posts")
             .WithSummary("Search posts")
-            .Produces<IReadOnlyList<PostListItemResponse>>(StatusCodes.Status200OK)
+            .Produces<PagedPostSearchResponse>(StatusCodes.Status200OK)
             .Produces(StatusCodes.Status400BadRequest);
 
         return endpoints;

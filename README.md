@@ -71,7 +71,7 @@ temporary databases and never use the development database.
 - `GET /api/posts/{id}`: returns a post with its content and comments.
 - `POST /api/posts/{id}/comments`: creates a comment for an existing post.
 - `GET /api/posts/search`: searches posts with optional filters, pagination, and
-  multiple sort fields.
+  multiple sort fields in the query string.
 
 Invalid payloads and identifiers return `400` with an `error` field. Missing posts
 return `404`, and unexpected failures return a generic `500` without implementation

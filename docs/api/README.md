@@ -142,6 +142,7 @@ Response `200`:
 
 Invalid ranges, pagination values, or sort fields return `400`.
 
+
 ## Error Contract
 
 Expected validation and resource errors use:
