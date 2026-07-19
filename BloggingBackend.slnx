@@ -1,6 +1,8 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/Blogging.Api/Blogging.Api.csproj" />
+    <Project Path="src/Blogging.Domain/Blogging.Domain.csproj" />
+    <Project Path="src/Blogging.Repository/Blogging.Repository.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/Blogging.Api.Tests/Blogging.Api.Tests.csproj" />
