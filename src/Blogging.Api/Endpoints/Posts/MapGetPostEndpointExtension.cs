@@ -1,3 +1,5 @@
+using System.Globalization;
+using Blogging.Api.Contracts;
 using Blogging.Api.Posts.Contracts;
 using Blogging.Domain.Posts;
 
@@ -19,16 +21,22 @@ public static class MapGetPostEndpointExtension
         ArgumentNullException.ThrowIfNull(endpoints);
 
         endpoints.MapGet(
-                "/api/posts/{id:int}",
-                async (int id, BlogPostService service, CancellationToken cancellationToken) =>
+                "/api/posts/{id}",
+                async (string id, BlogPostService service, CancellationToken cancellationToken) =>
                 {
+                    if (!int.TryParse(id, NumberStyles.None, CultureInfo.InvariantCulture, out var postId)
+                        || postId <= 0)
+                    {
+                        return Results.BadRequest(new ApiErrorResponse("Post id must be a positive integer."));
+                    }
+
                     var post = await service
-                        .GetByIdAsync(id, cancellationToken)
+                        .GetByIdAsync(postId, cancellationToken)
                         .ConfigureAwait(false);
 
                     if (post is null)
                     {
-                        return Results.NotFound(new { error = "Post not found." });
+                        return Results.NotFound(new ApiErrorResponse("Post not found."));
                     }
 
                     var response = new PostDetailResponse(

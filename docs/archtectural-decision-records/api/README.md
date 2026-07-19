@@ -63,3 +63,7 @@ responses.
 - `POST /api/posts`
 - `GET /api/posts/{id}`
 - `POST /api/posts/{id}/comments`
+
+Invalid payloads and identifiers use `400` with the stable `error` envelope. Missing
+resources use `404`, while unexpected failures use a generic `500` response without
+stack traces, SQL, secrets, or user payloads.

@@ -1,4 +1,5 @@
 using Blogging.Domain.Entities;
+using Blogging.Domain.Validation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
@@ -11,7 +12,9 @@ internal sealed class CommentEntityConfigurator : IEntityTypeConfigurator<Commen
         entity.ToTable("comments");
         entity.HasKey(comment => comment.Id);
         entity.Property(comment => comment.Id).ValueGeneratedOnAdd();
-        entity.Property(comment => comment.Content).IsRequired().HasMaxLength(2000);
+        entity.Property(comment => comment.Content)
+            .IsRequired()
+            .HasMaxLength(PostValidationRules.CommentContentMaxLength);
         entity.HasIndex(comment => comment.PostId);
     }
 }

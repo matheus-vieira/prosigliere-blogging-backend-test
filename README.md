@@ -68,6 +68,10 @@ or HTTPS CORS request.
 - `GET /api/posts/{id}`: returns a post with its content and comments.
 - `POST /api/posts/{id}/comments`: creates a comment for an existing post.
 
+Invalid payloads and identifiers return `400` with an `error` field. Missing posts
+return `404`, and unexpected failures return a generic `500` without implementation
+details.
+
 ## Quality Checks
 
 Run the complete local validation before opening a pull request:

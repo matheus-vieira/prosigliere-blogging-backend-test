@@ -1,3 +1,5 @@
+using System.Globalization;
+using Blogging.Api.Contracts;
 using Blogging.Api.Posts.Contracts;
 using Blogging.Domain.Posts;
 
@@ -19,17 +21,28 @@ public static class MapCreateCommentEndpointExtension
         ArgumentNullException.ThrowIfNull(endpoints);
 
         endpoints.MapPost(
-                "/api/posts/{id:int}/comments",
+                "/api/posts/{id}/comments",
                 async (
-                    int id,
-                    CreateCommentRequest request,
+                    string id,
+                    CreateCommentRequest? request,
                     BlogPostService service,
                     CancellationToken cancellationToken) =>
                 {
                     try
                     {
+                        if (!int.TryParse(id, NumberStyles.None, CultureInfo.InvariantCulture, out var postId)
+                            || postId <= 0)
+                        {
+                            return Results.BadRequest(new ApiErrorResponse("Post id must be a positive integer."));
+                        }
+
+                        if (request is null)
+                        {
+                            return Results.BadRequest(new ApiErrorResponse("Request body is required."));
+                        }
+
                         var comment = await service.CreateCommentAsync(
-                                id,
+                                postId,
                                 new CreateCommentCommand
                                 {
                                     Content = request.Content ?? string.Empty
@@ -39,7 +52,7 @@ public static class MapCreateCommentEndpointExtension
 
                         if (comment is null)
                         {
-                            return Results.NotFound(new { error = "Post not found." });
+                            return Results.NotFound(new ApiErrorResponse("Post not found."));
                         }
 
                         var response = new CommentResponse(
@@ -47,11 +60,11 @@ public static class MapCreateCommentEndpointExtension
                             comment.PostId,
                             comment.Content);
 
-                        return Results.Created($"/api/posts/{id}", response);
+                        return Results.Created($"/api/posts/{postId}", response);
                     }
                     catch (ArgumentException exception)
                     {
-                        return Results.BadRequest(new { error = exception.Message });
+                        return Results.BadRequest(new ApiErrorResponse(exception.Message));
                     }
                 })
             .WithTags("Comments")

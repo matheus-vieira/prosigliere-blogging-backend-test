@@ -18,7 +18,13 @@ public static class AddBloggingApiExtension
         ArgumentNullException.ThrowIfNull(builder);
 
         builder.Services.AddHealthChecks();
-        builder.Services.AddProblemDetails();
+        builder.Services.AddProblemDetails(options =>
+        {
+            options.CustomizeProblemDetails = context =>
+            {
+                context.ProblemDetails.Extensions["error"] = "Invalid request.";
+            };
+        });
         builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
         builder.Services.AddEndpointsApiExplorer();
         builder.Services.AddSwaggerGen(options =>
