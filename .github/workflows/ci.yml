@@ -1,0 +1,70 @@
+name: .NET Quality Gates
+
+on:
+  pull_request:
+    types: [opened, reopened, synchronize]
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  restore:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.110
+      - run: dotnet --version
+      - run: dotnet restore BloggingBackend.slnx
+
+  format:
+    needs: restore
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.110
+      - run: dotnet --version
+      - run: dotnet restore BloggingBackend.slnx
+      - run: dotnet format BloggingBackend.slnx --no-restore --verify-no-changes
+
+  build:
+    needs: format
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.110
+      - run: dotnet --version
+      - run: dotnet restore BloggingBackend.slnx
+      - run: dotnet build BloggingBackend.slnx --no-restore --warnaserror
+
+  test:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.110
+      - run: dotnet --version
+      - run: dotnet restore BloggingBackend.slnx
+      - run: dotnet build BloggingBackend.slnx --no-restore
+      - run: dotnet test BloggingBackend.slnx --no-build --no-restore
+
+  package-audit:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.110
+      - run: dotnet --version
+      - run: dotnet restore BloggingBackend.slnx
+      - run: dotnet list BloggingBackend.slnx package --vulnerable --include-transitive
