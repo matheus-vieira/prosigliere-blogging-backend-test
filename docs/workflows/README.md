@@ -24,6 +24,9 @@ the required `10.0.110` version, and has only the permissions needed by the
 workflow. The workflow does not start the API, create the development database,
 deploy, or publish artifacts.
 
+The workflow uses `actions/checkout@v5` and `actions/setup-dotnet@v5`, which
+target the Node.js 24 runtime used by current GitHub-hosted runners.
+
 ## Why Commands Repeat
 
 The jobs run on isolated GitHub-hosted runners. `needs` controls job ordering,
@@ -44,13 +47,15 @@ This workflow runs for pull request `opened`, `edited`, `reopened`, and
 `synchronize` events. It has two independent jobs:
 
 1. `pr-title` validates the title with
-   `amannn/action-semantic-pull-request@v5`.
+   `amannn/action-semantic-pull-request@v6`.
 2. `commit-messages` checks the complete pull request history with
    `wagoid/commitlint-github-action@v5` and the root `commitlint.config.cjs`.
 
 The title job has only `pull-requests: read` permission. The commit job has
-only `contents: read` permission and uses `fetch-depth: 0`. This workflow does
-not run .NET commands and does not duplicate the package, build, or test gates.
+only `contents: read` permission and uses `fetch-depth: 0`. The checkout uses
+`actions/checkout@v5`, and the title validator uses version 6, both targeting
+Node.js 24. This workflow does not run .NET commands and does not duplicate the
+package, build, or test gates.
 
 ## Review and Merge Order
 
