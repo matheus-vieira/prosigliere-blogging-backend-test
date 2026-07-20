@@ -24,6 +24,9 @@ the required `10.0.110` version, and has only the permissions needed by the
 workflow. The workflow does not start the API, create the development database,
 deploy, or publish artifacts.
 
+The workflow uses `actions/checkout@v5` and `actions/setup-dotnet@v5`, which
+target the Node.js 24 runtime used by current GitHub-hosted runners.
+
 ## Why Commands Repeat
 
 The jobs run on isolated GitHub-hosted runners. `needs` controls job ordering,
@@ -36,13 +39,33 @@ run on a clean runner. Sharing artifacts, relying on a cache, or combining jobs
 could reduce execution time, but would add coupling and should only be adopted
 after a measured performance need.
 
-## Follow-up Documentation
+### Conventional Commits
 
-The Conventional Commits workflow is implemented separately in PR #12. After
-this PR is approved and merged, synchronize that branch with `main` and extend
-this README with the title and commit-message validation details. This order
-keeps the documentation aligned with the files already present in each merged
-revision.
+File: `.github/workflows/conventional-commits.yml`
+
+This workflow runs for pull request `opened`, `edited`, `reopened`, and
+`synchronize` events. It has two independent jobs:
+
+1. `pr-title` validates the title with
+   `amannn/action-semantic-pull-request@v6`.
+2. `commit-messages` checks the complete pull request history with
+   `wagoid/commitlint-github-action@v5` and the root `commitlint.config.cjs`.
+
+The title job has only `pull-requests: read` permission. The commit job has
+only `contents: read` permission and uses `fetch-depth: 0`. The checkout uses
+`actions/checkout@v5`, and the title validator uses version 6, both targeting
+Node.js 24. This workflow does not run .NET commands and does not duplicate the
+package, build, or test gates.
+
+## Review and Merge Order
+
+The documentation and workflow files were intentionally delivered in sequence:
+
+1. PR #11 added the .NET quality workflow and the runner-isolation guidance.
+2. After PR #11 was merged, PR #12 synchronized with `main`.
+3. PR #12 completes the Conventional Commits workflow documentation.
+4. Configure both workflow check names as required checks only after both
+   workflows have been approved and merged.
 
 Merge into `main` remains a human-controlled action. Do not bypass a failed
 check or configure branch protection before the workflows have been reviewed.
