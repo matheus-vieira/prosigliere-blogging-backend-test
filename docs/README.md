@@ -19,6 +19,8 @@ and architectural decisions belong here.
 
 - [`archtectural-decision-records/`](archtectural-decision-records/): decisions
   that affect architecture, dependencies, and infrastructure.
+- [`workflows/`](workflows/): GitHub Actions workflow responsibilities, quality
+  gates, permissions, and review order.
 
 ## Related Documentation
 
